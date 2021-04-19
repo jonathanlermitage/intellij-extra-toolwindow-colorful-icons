@@ -14,7 +14,7 @@
     <a href="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/actions?query=workflow%3A%22Compatibility+EAP%22"><img src="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/workflows/Compatibility%20EAP/badge.svg"/></a>
 </p-->
 
-IntelliJ IDEA based IDEs plugin that makes tool window icons colorful. This plugin is based on the [ToolWindow Colorful Icons](https://plugins.jetbrains.com/plugin/10863-toolwindow-colorful-icons) plugin (you should deactivate or uninstall it), and **adds some additional icons**.
+IntelliJ IDEA based IDEs plugin that makes tool window icons colorful. This plugin is based on the [ToolWindow Colorful Icons](https://plugins.jetbrains.com/plugin/10863-toolwindow-colorful-icons) plugin, and **adds some additional icons**.
 
 1. [Build](#build)  
 2. [Contribution](#contribution)  
