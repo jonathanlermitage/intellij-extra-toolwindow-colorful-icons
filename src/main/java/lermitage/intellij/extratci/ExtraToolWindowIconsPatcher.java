@@ -1,4 +1,4 @@
-package lermitage.intellij.exratci;
+package lermitage.intellij.extratci;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.IconLoader;

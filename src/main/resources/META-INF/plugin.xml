@@ -33,7 +33,7 @@
     </extensions>
     <application-components>
         <component>
-            <implementation-class>lermitage.intellij.exratci.ExtraToolWindowIconsPatcher</implementation-class>
+            <implementation-class>lermitage.intellij.extratci.ExtraToolWindowIconsPatcher</implementation-class>
         </component>
     </application-components>
 
