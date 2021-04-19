@@ -12,6 +12,7 @@ import java.util.Map;
 
 public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
+    @SuppressWarnings("unused")
     private static final Logger LOGGER = Logger.getInstance(ExtraToolWindowIconsPatcher.class);
 
     private final Map<String, String> icons = new HashMap<>();
