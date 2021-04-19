@@ -1,4 +1,4 @@
-package com.intellij;
+package lermitage.intellij.exratci;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.IconLoader;
@@ -73,7 +73,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
         String iconOriginalPath = (new File(path)).getName();
-        LOGGER.warn("patch " + iconOriginalPath);
+        //LOGGER.warn("patch " + iconOriginalPath);
         return this.icons.get(iconOriginalPath);
     }
 }
