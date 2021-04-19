@@ -64,6 +64,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("toolWindowGradle.svg", "/extratci/icons/custom/toolWindowGradle.svg");
         icons.put("toolWindowProblemsEmpty.svg", "/extratci/icons/custom/problemsEmpty.svg");
         icons.put("toolWindowProject.svg", "/extratci/icons/custom/toolWindowProject.svg");
+        icons.put("branch.svg", "/extratci/icons/custom/branch.svg");
     }
 
     @Override
