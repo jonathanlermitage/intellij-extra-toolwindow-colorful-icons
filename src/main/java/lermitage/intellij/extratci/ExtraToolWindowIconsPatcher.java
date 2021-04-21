@@ -62,6 +62,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         // custom icons
         icons.put("OpenTerminal_13x13.svg", "/extratci/icons/custom/OpenTerminal_13x13.svg");
         icons.put("pullRequestsToolWindow.svg", "/extratci/icons/custom/pullRequestsToolWindow.svg");
+        icons.put("pythonPackages.svg", "/extratci/icons/custom/pythonPackages.svg");
         icons.put("toolWindowCommit.svg", "/extratci/icons/custom/toolWindowCommit.svg");
         icons.put("toolWindowGradle.svg", "/extratci/icons/custom/toolWindowGradle.svg");
         icons.put("toolWindowProblemsEmpty.svg", "/extratci/icons/custom/problemsEmpty.svg");
