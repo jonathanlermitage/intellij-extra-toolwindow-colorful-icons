@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.0.1 (WIP)
+## 1.1.0 (2021/04/22)
 * Terminal icon: bigger icon.
 * Branch (dark) icon: brighter color.
 * Problem icon: use a green color.
