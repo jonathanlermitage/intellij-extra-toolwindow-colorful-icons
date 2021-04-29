@@ -1,18 +1,13 @@
 <h1 align="center">
-    <img src="./src/main/resources/META-INF/pluginIcon.svg" width="84" height="84" alt="logo"/><br/>
+    <a href="https://plugins.jetbrains.com/plugin/16604-extra-toolwindow-colorful-icons"><img src="./src/main/resources/META-INF/pluginIcon.svg" width="84" height="84" alt="logo"/></a><br/>
     Extra ToolWindow Colorful Icons
 </h1>
 
-<!--p align="center">
-    <a href="https://plugins.jetbrains.com/plugin/11058-extra-icons"><img src="https://img.shields.io/jetbrains/plugin/v/11058-extra-icons.svg"/></a>
-    <a href="https://plugins.jetbrains.com/plugin/11058-extra-icons"><img src="https://img.shields.io/jetbrains/plugin/d/11058-extra-icons.svg"/></a>
-    <a href="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/jonathanlermitage/intellij-extra-icons-plugin.svg"/></a>
-    <a href="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/graphs/contributors"><img src="https://img.shields.io/github/contributors/jonathanlermitage/intellij-extra-icons-plugin"/></a><br>
-    <a href="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/actions?query=workflow%3A%22Build%22"><img src="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/workflows/Build/badge.svg"/></a>
-    <a href="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/actions?query=workflow%3A%22Compatibility%22"><img src="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/workflows/Compatibility/badge.svg"/></a><br>
-    <a href="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/actions?query=workflow%3A%22Build+EAP%22"><img src="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/workflows/Build%20EAP/badge.svg"/></a>
-    <a href="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/actions?query=workflow%3A%22Compatibility+EAP%22"><img src="https://github.com/jonathanlermitage/intellij-extra-icons-plugin/workflows/Compatibility%20EAP/badge.svg"/></a>
-</p-->
+<p align="center">
+    <a href="https://plugins.jetbrains.com/plugin/16604-extra-toolwindow-colorful-icons"><img src="https://img.shields.io/jetbrains/plugin/v/16604-extra-toolwindow-colorful-icons.svg"/></a>
+    <a href="https://plugins.jetbrains.com/plugin/16604-extra-toolwindow-colorful-icons"><img src="https://img.shields.io/jetbrains/plugin/d/16604-extra-toolwindow-colorful-icons.svg"/></a>
+    </a>
+</p>
 
 IntelliJ IDEA based IDEs plugin that makes tool window icons colorful. This plugin is based on the [ToolWindow Colorful Icons](https://plugins.jetbrains.com/plugin/10863-toolwindow-colorful-icons) plugin, and **adds some additional icons**.
 
