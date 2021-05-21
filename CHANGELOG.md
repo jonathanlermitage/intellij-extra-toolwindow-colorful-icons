@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.2.0 (2021/05/22)
+* Plugin can be loaded with no IDE restart.
+
 ## 1.1.0 (2021/04/22)
 * Terminal icon: bigger icon.
 * Branch (dark) icon: brighter color.

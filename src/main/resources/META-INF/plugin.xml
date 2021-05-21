@@ -1,4 +1,4 @@
-<idea-plugin require-restart="true">
+<idea-plugin>
     <id>lermitage.intellij.extratci</id>
     <name>Extra ToolWindow Colorful Icons</name>
     <version>REPLACED_BY_GRADLE</version>
@@ -14,6 +14,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.2.0 (2021/05/22)
+    <ul>
+      <li>Plugin can be loaded with no IDE restart.</li>
+    </ul>
     1.1.0 (2021/04/22)
     <ul>
       <li>Terminal icon: bigger icon.</li>
