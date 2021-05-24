@@ -16,6 +16,8 @@ IntelliJ IDEA based IDEs plugin that makes tool window icons colorful. This plug
 3. [License](#license)  
 4. [Credits](#credits)  
 
+![Plugin screenshot](misc/screenshots/ide_toolbars.png)
+
 ## Build
 
 Install JDK8+. You should be able to start Gradle Wrapper (`gradlew`).
