@@ -14,6 +14,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.3.0 (WIP)
+    <ul>
+      <li>Add colors for Make icon.</li>
+    </ul>
     1.2.0 (2021/05/22)
     <ul>
       <li>Plugin can be loaded with no IDE restart.</li>
