@@ -2,6 +2,7 @@
 
 ## 1.3.0 (WIP)
 * Add colors for Make icon (tested with GoLand IDE).
+* Add colors for Paste, Save All and Show Context Actions icons. 
 
 ## 1.2.0 (2021/05/22)
 * Plugin can be loaded with no IDE restart.
