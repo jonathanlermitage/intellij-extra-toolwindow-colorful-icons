@@ -42,7 +42,7 @@ for ((cmd = 1; cmd <= $#; cmd++)); do
         ;;
 
     "test")
-        ./gradlew cleanTest test verifyPlugin --warning-mode all
+        ./gradlew cleanTest verifyPlugin --warning-mode all
         ;;
 
     "cv")
