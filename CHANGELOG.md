@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.3.0 (WIP)
+## 1.3.0 (2021/05/29)
 * Add colors for Make icon (tested with GoLand IDE).
 * Add colors for Ant, Paste, Save All and Show Context Actions icons. 
 
