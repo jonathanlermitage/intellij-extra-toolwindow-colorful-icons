@@ -14,26 +14,14 @@
     </description>
 
     <change-notes><![CDATA[
+    1.4.0 (WIP)
+    <ul>
+      <li>add colors to Reload All from Disk and Reload from Disk icons.</li>
+    </ul>
     1.3.0 (2021/05/29)
     <ul>
-      <li>Add colors for Make icon (tested with GoLand IDE).</li>
-      <li>Add colors for Ant, Paste, Save All and Show Context Actions icons.</li>
-    </ul>
-    1.2.0 (2021/05/22)
-    <ul>
-      <li>Plugin can be loaded with no IDE restart.</li>
-    </ul>
-    1.1.0 (2021/04/22)
-    <ul>
-      <li>Terminal icon: bigger icon.</li>
-      <li>Branch dark icon: brighter color.</li>
-      <li>Problem icon: use a green color.</li>
-      <li>Add colors to Commit icon.</li>
-      <li>Add colors to Python Packages icon.</li>
-    </ul>
-    1.0.0 (2021/04/19)
-    <ul>
-      <li>First release. Add colors or rework to Terminal, Pull Request, Gradle, Problems (when empty), Project, Branch icons. A future release will make this configurable.</li>
+      <li>add colors for Make icon (tested with GoLand IDE).</li>
+      <li>add colors for Ant, Paste, Save All and Show Context Actions icons.</li>
     </ul>
     ]]>
     </change-notes>
