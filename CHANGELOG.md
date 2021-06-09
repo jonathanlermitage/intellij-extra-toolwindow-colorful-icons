@@ -2,6 +2,7 @@
 
 ## 1.4.0 (WIP)
 * add colors to Reload All from Disk and Reload from Disk icons.
+* revert Paste icon.
 
 ## 1.3.0 (2021/05/29)
 * add colors for Make icon (tested with GoLand IDE).
