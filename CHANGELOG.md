@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.4.0 (WIP)
+## 1.4.0 (2021/06/10)
 * add colors to Reload All from Disk and Reload from Disk icons.
 * revert Paste icon.
 
