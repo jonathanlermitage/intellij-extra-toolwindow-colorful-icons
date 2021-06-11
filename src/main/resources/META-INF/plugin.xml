@@ -14,6 +14,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.5.0 (WIP)
+    <ul>
+      <li>add colors to Reset and Rollback icons.</li>
+    </ul>
     1.4.0 (2021/06/10)
     <ul>
       <li>add colors to Reload All from Disk and Reload from Disk icons.</li>
