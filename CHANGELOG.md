@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.5.0 (WIP)
+## 1.5.0 (2021/06/20)
 * add colors to Reset and Rollback icons.
 
 ## 1.4.0 (2021/06/10)

@@ -1,11 +1,12 @@
-<idea-plugin>
+<idea-plugin require-restart="true">
     <id>lermitage.intellij.extratci</id>
     <name>Extra ToolWindow Colorful Icons</name>
     <version>REPLACED_BY_GRADLE</version>
     <vendor email="jonathan.lermitage@gmail.com" url="https://github.com/jonathanlermitage">Jonathan Lermitage</vendor>
 
     <description><![CDATA[
-      Makes tool window icons colorful. This plugin is based on the ToolWindow Colorful Icons plugin, and adds some additional icons.<br/><br/>
+      Makes tool window icons colorful. This plugin is based on the ToolWindow Colorful Icons plugin, and adds some additional icons.<br/>
+      See <i>Settings &gt; Appearance &amp; Behavior &gt; Extra ToolWindow Colorful Icons</i> to select icons to (de)activate.<br/>
       If you find this plugin helpful, you can <a href="http://buymeacoff.ee/jlermitage">buy me a coffee</a>. <b>Thank you! 👍</b><br/><br/>
       See <a href="https://github.com/jonathanlermitage/intellij-extra-toolwindow-colorful-icons/blob/main/CHANGELOG.md">changelog</a>
       and <a href="https://github.com/jonathanlermitage/intellij-extra-toolwindow-colorful-icons/blob/main/README.md">readme</a> on GitHub.
@@ -14,7 +15,7 @@
     </description>
 
     <change-notes><![CDATA[
-    1.5.0 (WIP)
+    1.5.0 (2021/06/20)
     <ul>
       <li>add colors to Reset and Rollback icons.</li>
     </ul>
