@@ -1,6 +1,5 @@
 package lermitage.intellij.extratci;
 
-import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.util.IconPathPatcher;
 import org.jetbrains.annotations.NotNull;
@@ -11,9 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
-
-    @SuppressWarnings("unused")
-    private static final Logger LOGGER = Logger.getInstance(ExtraToolWindowIconsPatcher.class);
 
     private final Map<String, String> icons = new HashMap<>();
 
@@ -86,7 +82,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
         String iconOriginalPath = (new File(path)).getName();
-        //LOGGER.warn("patch " + iconOriginalPath);
         return this.icons.get(iconOriginalPath);
     }
 }
