@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 package lermitage.intellij.extratci;
 
 import com.intellij.openapi.util.IconLoader;
@@ -72,6 +74,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("refresh.svg", "/extratci/icons/custom/refresh.svg");
         icons.put("reset.svg", "/extratci/icons/custom/reset.svg");
         icons.put("rollback.svg", "/extratci/icons/custom/rollback.svg");
+        icons.put("toolWindowServices.svg", "/extratci/icons/custom/toolWindowServices.svg");
     }
 
     @Override
