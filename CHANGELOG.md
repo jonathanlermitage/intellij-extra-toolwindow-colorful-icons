@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.6.0 (WIP)
+## 1.6.0 (2021/07/25)
 * add colors to Services icon.
 * rework the Feature Trainer light icon.
 
