@@ -2,6 +2,7 @@
 
 ## 1.6.0 (WIP)
 * add colors to Services icon.
+* rework the Feature Trainer light icon.
 
 ## 1.5.0 (2021/06/20)
 * add colors to Reset and Rollback icons.

@@ -75,6 +75,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("reset.svg", "/extratci/icons/custom/reset.svg");
         icons.put("rollback.svg", "/extratci/icons/custom/rollback.svg");
         icons.put("toolWindowServices.svg", "/extratci/icons/custom/toolWindowServices.svg");
+        icons.put("featureTrainer.svg", "/extratci/icons/custom/featureTrainer.svg");
+        icons.put("featureTrainerToolWindow.svg", "/extratci/icons/custom/featureTrainerToolWindow.svg");
     }
 
     @Override
