@@ -15,6 +15,11 @@
     </description>
 
     <change-notes><![CDATA[
+    1.7.0 (WIP)
+    <ul>
+      <li>add colors to Dependencies icon.</li>
+      <li>rework the Python Packages icon</li>
+    </ul>
     1.6.0 (2021/07/25)
     <ul>
       <li>add colors to Services icon.</li>
