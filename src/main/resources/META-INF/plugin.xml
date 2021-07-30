@@ -15,6 +15,11 @@
     </description>
 
     <change-notes><![CDATA[
+    1.8.0 (WIP)
+    <ul>
+      <li>fix Problem icon size.</li>
+      <li>rework the Event Log icon (adjust its size).</li>
+    </ul>
     1.7.0 (2021/07/30)
     <ul>
       <li>add colors to Dependencies icon.</li>
