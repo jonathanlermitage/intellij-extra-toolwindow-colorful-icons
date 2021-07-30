@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.7.0 (WIP)
+## 1.7.0 (2021/07/30)
 * add colors to Dependencies icon.
 * rework the Python Packages icon.
 
