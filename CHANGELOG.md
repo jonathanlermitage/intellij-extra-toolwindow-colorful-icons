@@ -1,7 +1,7 @@
 # Extra ToolWindow Colorful Icons Change Log
 
 ## 1.8.0 (WIP)
-* fix Problem icon size.
+* fix Problems icon size.
 
 ## 1.7.0 (2021/07/30)
 * add colors to Dependencies icon.
