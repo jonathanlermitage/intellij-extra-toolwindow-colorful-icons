@@ -2,7 +2,6 @@
 
 ## 1.8.0 (WIP)
 * fix Problem icon size.
-* rework the Event Log icon (adjust its size).
 
 ## 1.7.0 (2021/07/30)
 * add colors to Dependencies icon.
