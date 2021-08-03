@@ -2,6 +2,10 @@
 
 ## 1.8.0 (WIP)
 * fix Problems icon size.
+* add colors to (Android) Emulator icon.
+* add colors to Read-Only icon.
+* add colors to Read-Write icon.
+* add colors to Lock icon.
 
 ## 1.7.0 (2021/07/30)
 * add colors to Dependencies icon.

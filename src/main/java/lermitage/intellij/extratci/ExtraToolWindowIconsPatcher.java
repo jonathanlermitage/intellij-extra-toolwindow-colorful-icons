@@ -78,6 +78,10 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("featureTrainer.svg", "/extratci/icons/custom/featureTrainer.svg");
         icons.put("featureTrainerToolWindow.svg", "/extratci/icons/custom/featureTrainerToolWindow.svg");
         icons.put("artifactSmall.svg", "/extratci/icons/custom/artifactSmall.svg");
+        icons.put("emulator.svg", "/extratci/icons/custom/emulator.svg");
+        icons.put("readwrite.svg", "/extratci/icons/custom/readwrite.svg");
+        icons.put("readonly.svg", "/extratci/icons/custom/readonly.svg");
+        icons.put("locked.svg", "/extratci/icons/custom/locked.svg");
     }
 
     @Override
