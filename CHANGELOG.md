@@ -6,6 +6,7 @@
 * add colors to Read-Only icon.
 * add colors to Read-Write icon.
 * add colors to Lock icon.
+* rework and add colors to App Inspection and Inspection Results icons.
 
 ## 1.7.0 (2021/07/30)
 * add colors to Dependencies icon.

@@ -81,7 +81,9 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("emulator.svg", "/extratci/icons/custom/emulator.svg");
         icons.put("readwrite.svg", "/extratci/icons/custom/readwrite.svg");
         icons.put("readonly.svg", "/extratci/icons/custom/readonly.svg");
-        icons.put("locked.svg", "/extratci/icons/custom/locked.svg");
+        icons.put("locked.svg", "/extratci/icons/custom/locked.svg"); // file badge (bottom-right corner) in editor tabs and Project view
+        icons.put("inspection.svg", "/extratci/icons/custom/inspector.svg"); // App Inspection
+        icons.put("toolWindowInspection.svg", "/extratci/icons/custom/inspector.svg"); // Inspection Results
     }
 
     @Override
