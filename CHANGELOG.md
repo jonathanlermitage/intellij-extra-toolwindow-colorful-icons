@@ -1,11 +1,14 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.8.0 (WIP)
+## 1.8.0 (2021/08/07)
 * fix Problems icon size.
 * add colors to (Android) Emulator icon.
+* add colors to (Android) Profiler icon.
 * add colors to Read-Only icon.
 * add colors to Read-Write icon.
 * add colors to Lock icon.
+* add colors to Add icon.
+* add colors to Merge icon.
 * rework and add colors to App Inspection and Inspection Results icons.
 
 ## 1.7.0 (2021/07/30)

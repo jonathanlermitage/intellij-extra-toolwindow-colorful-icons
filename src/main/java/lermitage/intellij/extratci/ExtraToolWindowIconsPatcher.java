@@ -64,6 +64,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("toolWindowCommit.svg", "/extratci/icons/custom/toolWindowCommit.svg");
         icons.put("toolWindowGradle.svg", "/extratci/icons/custom/toolWindowGradle.svg");
         icons.put("toolWindowProblemsEmpty.svg", "/extratci/icons/custom/problemsEmpty.svg");
+        icons.put("problemsEmpty.svg", "/extratci/icons/custom/problemsEmpty.svg");
         icons.put("toolWindowProject.svg", "/extratci/icons/custom/toolWindowProject.svg");
         icons.put("branch.svg", "/extratci/icons/custom/branch.svg");
         icons.put("makefileToolWindow.svg", "/extratci/icons/custom/makefileToolWindow.svg");
@@ -84,6 +85,9 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("locked.svg", "/extratci/icons/custom/locked.svg"); // file badge (bottom-right corner) in editor tabs and Project view
         icons.put("inspection.svg", "/extratci/icons/custom/inspector.svg"); // App Inspection
         icons.put("toolWindowInspection.svg", "/extratci/icons/custom/inspector.svg"); // Inspection Results
+        icons.put("add.svg", "/extratci/icons/custom/add.svg");
+        icons.put("merge.svg", "/extratci/icons/custom/merge.svg");
+        icons.put("android-profiler.svg", "/extratci/icons/custom/profiler.svg");
     }
 
     @Override

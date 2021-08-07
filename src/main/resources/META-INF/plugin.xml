@@ -15,13 +15,16 @@
     </description>
 
     <change-notes><![CDATA[
-    1.8.0 (WIP)
+    1.8.0 (2021/08/07)
     <ul>
       <li>fix Problems icon size.</li>
       <li>add colors to (Android) Emulator icon.</li>
+      <li>add colors to (Android) Profiler icon.</li>
       <li>add colors to Read-Only icon.</li>
       <li>add colors to Read-Write icon.</li>
       <li>add colors to Lock icon.</li>
+      <li>add colors to Add icon.</li>
+      <li>add colors to Merge icon.</li>
       <li>rework and add colors to App Inspection and Inspection Results icons.</li>
     </ul>
     1.7.0 (2021/07/30)
