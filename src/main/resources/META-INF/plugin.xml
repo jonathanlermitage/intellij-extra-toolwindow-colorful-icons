@@ -15,6 +15,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.9.0 (WIP)
+    <ul>
+      <li>add a config panel to choose icons to (de)activate. See <i>Settings &gt; Appearance &amp; Behavior &gt; Extra ToolWindow Colorful Icons</i>.</li>
+    </ul>
     1.8.0 (2021/08/07)
     <ul>
       <li>fix Problems icon size.</li>
@@ -63,6 +67,11 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <applicationService serviceImplementation="lermitage.intellij.extratci.SettingsService"/>
+        <applicationConfigurable instance="lermitage.intellij.extratci.SettingsForm"
+                                 id="LermitageExtraTci"
+                                 displayName="Extra ToolWindow Colorful Icons"
+                                 parentId="appearance"/>
     </extensions>
     <application-components>
         <component>

@@ -9,15 +9,18 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
-    private final Map<String, String> icons = new HashMap<>();
+    private Map<String, String> icons;
+    private boolean configLoaded = false;
 
-    public ExtraToolWindowIconsPatcher() {
-        super();
-        IconLoader.installPathPatcher(this);
+    @SuppressWarnings("SpellCheckingInspection")
+    @NotNull
+    public static Map<String, String> allIcons() {
+        Map<String, String> icons = new HashMap<>();
 
         // icons copied from ToolWindow Colorful Icons plugin
         icons.put("CMakeToolWindow.svg", "/extratci/icons/original/CIDR/clion/resources/icons/CMakeToolWindow.svg");
@@ -88,6 +91,14 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("add.svg", "/extratci/icons/custom/add.svg");
         icons.put("merge.svg", "/extratci/icons/custom/merge.svg");
         icons.put("android-profiler.svg", "/extratci/icons/custom/profiler.svg");
+
+        return icons;
+    }
+
+    public ExtraToolWindowIconsPatcher() {
+        super();
+        IconLoader.installPathPatcher(this);
+        loadConfig();
     }
 
     @Override
@@ -98,6 +109,19 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
         String iconOriginalPath = (new File(path)).getName();
+        if (icons == null) {
+            loadConfig();
+        }
         return this.icons.get(iconOriginalPath);
+    }
+
+    private void loadConfig() {
+        if (!configLoaded) {
+            Map<String, String> allIcons = SettingsService.getAllIcons();
+            List<String> disabledIconNames = SettingsService.getInstance().getDisabledIcons();
+            disabledIconNames.forEach(allIcons::remove);
+            icons = allIcons;
+            configLoaded = true;
+        }
     }
 }

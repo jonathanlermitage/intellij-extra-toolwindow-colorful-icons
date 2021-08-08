@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.9.0 (WIP)
+* add a config panel to choose icons to apply. See `Settings` > `Appearance & Behavior` > `Extra ToolWindow Colorful Icons`.
+
 ## 1.8.0 (2021/08/07)
 * fix Problems icon size.
 * add colors to (Android) Emulator icon.
