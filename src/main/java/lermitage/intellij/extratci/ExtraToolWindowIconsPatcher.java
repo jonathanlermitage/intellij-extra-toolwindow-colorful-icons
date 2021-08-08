@@ -2,6 +2,7 @@
 
 package lermitage.intellij.extratci;
 
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.util.IconPathPatcher;
 import org.jetbrains.annotations.NotNull;
@@ -13,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
+
+    private final Logger LOG = Logger.getInstance(getClass().getName());
 
     private Map<String, String> icons;
     private boolean configLoaded = false;
@@ -122,6 +125,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
             disabledIconNames.forEach(allIcons::remove);
             icons = allIcons;
             configLoaded = true;
+            LOG.info("config loaded");
         }
     }
 }
