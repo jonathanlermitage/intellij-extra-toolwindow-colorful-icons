@@ -123,6 +123,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         List<String> disabledIcons = SettingsService.getInstance().getDisabledIcons();
         disabledIcons.forEach(enabledIcons::remove);
         icons = enabledIcons;
-        LOG.warn("config loaded with success, enabled " + icons.size() + "/" + allIconsSize + " items");
+        LOG.info("config loaded with success, enabled " + icons.size() + "/" + allIconsSize + " items");
     }
 }
