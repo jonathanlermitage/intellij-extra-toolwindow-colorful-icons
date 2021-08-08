@@ -18,7 +18,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     private final Logger LOG = Logger.getInstance(getClass().getName());
 
     private Map<String, String> icons;
-    private boolean configLoaded = false;
 
     @SuppressWarnings("SpellCheckingInspection")
     @NotNull
@@ -100,8 +99,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
     public ExtraToolWindowIconsPatcher() {
         super();
-        IconLoader.installPathPatcher(this);
         loadConfig();
+        IconLoader.installPathPatcher(this);
     }
 
     @Override
@@ -119,13 +118,11 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     }
 
     private void loadConfig() {
-        if (!configLoaded) {
-            Map<String, String> allIcons = SettingsService.getAllIcons();
-            List<String> disabledIconNames = SettingsService.getInstance().getDisabledIcons();
-            disabledIconNames.forEach(allIcons::remove);
-            icons = allIcons;
-            configLoaded = true;
-            LOG.info("config loaded");
-        }
+        Map<String, String> enabledIcons = new HashMap<>(SettingsService.getAllIcons());
+        int allIconsSize = enabledIcons.size();
+        List<String> disabledIcons = SettingsService.getInstance().getDisabledIcons();
+        disabledIcons.forEach(enabledIcons::remove);
+        icons = enabledIcons;
+        LOG.warn("config loaded with success, enabled " + icons.size() + "/" + allIconsSize + " items");
     }
 }
