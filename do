@@ -13,7 +13,6 @@ for ((cmd = 1; cmd <= $#; cmd++)); do
         echo "run :    run plugin in IntelliJ Ultimate"
         echo "runeap:  run plugin in latest IntelliJ EAP Snapshot"
         echo "release: package plugin"
-        echo "test:    run unit tests"
         echo "cv:      check dependencies and Gradle updates"
         echo "svgo:    optimize SVG icons with SGVO. SVGO must be present, type 'npm install -g svgo' if needed"
         ;;
@@ -38,11 +37,7 @@ for ((cmd = 1; cmd <= $#; cmd++)); do
         ;;
 
     "release")
-        ./gradlew clean buildPlugin test verifyPlugin --warning-mode all
-        ;;
-
-    "test")
-        ./gradlew cleanTest verifyPlugin --warning-mode all
+        ./gradlew clean buildPlugin verifyPlugin --warning-mode all
         ;;
 
     "cv")

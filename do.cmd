@@ -6,7 +6,6 @@ if [%1] == [help] (
   echo run :    run plugin in IntelliJ Ultimate
   echo runeap:  run plugin in latest IntelliJ EAP Snapshot
   echo release: package plugin
-  echo test:    run unit tests
   echo cv:      check dependencies and Gradle updates
   echo svgo:    optimize SVG icons with SGVO. SVGO must be present, type 'npm install -g svgo' if needed
 )
@@ -28,9 +27,6 @@ if [%1] == [runeap] (
 )
 if [%1] == [release] (
   gradlew clean buildPlugin verifyPlugin --warning-mode all
-)
-if [%1] == [test] (
-  gradlew cleanTest test verifyPlugin --warning-mode all
 )
 if [%1] == [cv] (
   gradlew dependencyUpdates --warning-mode all
