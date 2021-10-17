@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.10.0 (2021/10/17)
+* add colors to Remove icon.
+
 ## 1.9.0 (2021/08/11)
 * add a config panel to choose icons to apply. See `Settings` > `Appearance & Behavior` > `Extra ToolWindow Colorful Icons`.
 

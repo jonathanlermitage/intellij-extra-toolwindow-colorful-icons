@@ -93,6 +93,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("add.svg", "/extratci/icons/custom/add.svg");
         icons.put("merge.svg", "/extratci/icons/custom/merge.svg");
         icons.put("android-profiler.svg", "/extratci/icons/custom/profiler.svg");
+        icons.put("remove.svg", "/extratci/icons/custom/remove.svg");
+        icons.put("removeSlot.svg", "/extratci/icons/custom/removeSlot.svg");
 
         return icons;
     }

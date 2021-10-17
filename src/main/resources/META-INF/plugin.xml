@@ -15,6 +15,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.10.0 (2021/10/17)
+    <ul>
+      <li>add colors to Remove icon.</li>
+    </ul>
     1.9.0 (2021/08/11)
     <ul>
       <li>add a config panel to choose icons to (de)activate. See <i>Settings &gt; Appearance &amp; Behavior &gt; Extra ToolWindow Colorful Icons</i>.</li>
