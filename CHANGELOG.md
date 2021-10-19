@@ -1,5 +1,10 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.11.0 (WIP)
+* add colors to Messages icon.
+* add colors to Print icon.
+* add colors to TODO icon.
+
 ## 1.10.0 (2021/10/17)
 * add colors to Remove icon.
 

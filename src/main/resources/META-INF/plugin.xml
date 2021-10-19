@@ -15,6 +15,12 @@
     </description>
 
     <change-notes><![CDATA[
+    1.11.0 (WIP)
+    <ul>
+      <li>add colors to Messages icon.</li>
+      <li>add colors to Print icon.</li>
+      <li>add colors to TODO icon.</li>
+    </ul>
     1.10.0 (2021/10/17)
     <ul>
       <li>add colors to Remove icon.</li>
