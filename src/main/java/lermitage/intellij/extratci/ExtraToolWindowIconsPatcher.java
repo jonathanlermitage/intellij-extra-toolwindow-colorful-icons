@@ -98,6 +98,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("print.svg", "/extratci/icons/custom/print.svg");
         icons.put("toolWindowMessages.svg", "/extratci/icons/custom/toolWindowMessages.svg");
         icons.put("toolWindowTodo.svg", "/extratci/icons/custom/toolWindowTodo.svg");
+        icons.put("collapseall.svg", "/extratci/icons/custom/collapseall.svg");
+        icons.put("expandall.svg", "/extratci/icons/custom/expandall.svg");
 
         return icons;
     }
