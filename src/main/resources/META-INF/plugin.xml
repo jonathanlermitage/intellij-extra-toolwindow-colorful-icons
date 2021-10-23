@@ -15,8 +15,10 @@
     </description>
 
     <change-notes><![CDATA[
-    1.11.0 (WIP)
+    1.11.0 (2021/10/24)
     <ul>
+      <li>add colors to Collapse All icon.</li>
+      <li>add colors to Expand All icon.</li>
       <li>add colors to Messages icon.</li>
       <li>add colors to Print icon.</li>
       <li>add colors to TODO icon.</li>

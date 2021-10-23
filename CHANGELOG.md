@@ -1,6 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.11.0 (WIP)
+## 1.11.0 (2021/10/24)
+* add colors to Collapse All icon.
+* add colors to Expand All icon.
 * add colors to Messages icon.
 * add colors to Print icon.
 * add colors to TODO icon.
