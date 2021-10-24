@@ -1,5 +1,10 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.12.0 (WIP)
+* add colors to Back icon.
+* add colors to Redo icon.
+* add colors to Undo icon.
+
 ## 1.11.0 (2021/10/24)
 * add colors to Collapse All icon.
 * add colors to Expand All icon.

@@ -100,6 +100,9 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("toolWindowTodo.svg", "/extratci/icons/custom/toolWindowTodo.svg");
         icons.put("collapseall.svg", "/extratci/icons/custom/collapseall.svg");
         icons.put("expandall.svg", "/extratci/icons/custom/expandall.svg");
+        icons.put("back.svg", "/extratci/icons/custom/back.svg");
+        icons.put("redo.svg", "/extratci/icons/custom/redo.svg");
+        icons.put("undo.svg", "/extratci/icons/custom/undo.svg");
 
         return icons;
     }
