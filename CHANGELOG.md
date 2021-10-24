@@ -2,6 +2,7 @@
 
 ## 1.12.0 (WIP)
 * add colors to Back icon.
+* add colors to Cut icon.
 * add colors to Redo icon.
 * add colors to Undo icon.
 
