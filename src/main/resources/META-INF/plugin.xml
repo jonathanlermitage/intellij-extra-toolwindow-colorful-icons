@@ -30,50 +30,6 @@
       <li>add colors to Print icon.</li>
       <li>add colors to TODO icon.</li>
     </ul>
-    1.10.0 (2021/10/17)
-    <ul>
-      <li>add colors to Remove icon.</li>
-    </ul>
-    1.9.0 (2021/08/11)
-    <ul>
-      <li>add a config panel to choose icons to (de)activate. See <i>Settings &gt; Appearance &amp; Behavior &gt; Extra ToolWindow Colorful Icons</i>.</li>
-    </ul>
-    1.8.0 (2021/08/07)
-    <ul>
-      <li>fix Problems icon size.</li>
-      <li>add colors to (Android) Emulator icon.</li>
-      <li>add colors to (Android) Profiler icon.</li>
-      <li>add colors to Read-Only icon.</li>
-      <li>add colors to Read-Write icon.</li>
-      <li>add colors to Lock icon.</li>
-      <li>add colors to Add icon.</li>
-      <li>add colors to Merge icon.</li>
-      <li>rework and add colors to App Inspection and Inspection Results icons.</li>
-    </ul>
-    1.7.0 (2021/07/30)
-    <ul>
-      <li>add colors to Dependencies icon.</li>
-      <li>rework the Python Packages icon.</li>
-    </ul>
-    1.6.0 (2021/07/25)
-    <ul>
-      <li>add colors to Services icon.</li>
-      <li>rework the Feature Trainer light icon.</li>
-    </ul>
-    1.5.0 (2021/06/20)
-    <ul>
-      <li>add colors to Reset and Rollback icons.</li>
-    </ul>
-    1.4.0 (2021/06/10)
-    <ul>
-      <li>add colors to Reload All from Disk and Reload from Disk icons.</li>
-      <li>revert Paste icon.</li>
-    </ul>
-    1.3.0 (2021/05/29)
-    <ul>
-      <li>add colors for Make icon (tested with GoLand IDE).</li>
-      <li>add colors for Ant, Paste, Save All and Show Context Actions icons.</li>
-    </ul>
     ]]>
     </change-notes>
 
