@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.12.0 (WIP)
+## 1.12.0 (2021/10/30)
 * add colors to Back icon.
 * add colors to Cut icon.
 * add colors to Redo icon.
