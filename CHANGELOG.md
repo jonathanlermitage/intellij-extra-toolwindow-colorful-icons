@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.14.0 (WIP)
+* add colors to CodeWithMe Access Off icons.
+
 ## 1.13.0 (2021/11/26)
 * add colors to Bookmarks icon (2021.3+).
 

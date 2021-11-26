@@ -105,6 +105,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("undo.svg", "/extratci/icons/custom/undo.svg");
         icons.put("menu-cut.svg", "/extratci/icons/custom/menu-cut.svg");
         icons.put("toolWindowBookmarks.svg", "/extratci/icons/custom/toolWindowBookmarks.svg");
+        icons.put("cwmAccessDotOff.svg", "/extratci/icons/custom/cwmAccessDotOff.svg");
+        icons.put("cwmAccessOff.svg", "/extratci/icons/custom/cwmAccessOff.svg");
 
         return icons;
     }

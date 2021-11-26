@@ -15,6 +15,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.14.0 (WIP)
+    <ul>
+      <li>add colors to CodeWithMe Access Off icons.</li>
+    </ul>
     1.13.0 (2021/11/26)
     <ul>
       <li>add colors to Bookmarks icon (2021.3+).</li>
@@ -25,14 +29,6 @@
       <li>add colors to Cut icon.</li>
       <li>add colors to Redo icon.</li>
       <li>add colors to Undo icon.</li>
-    </ul>
-    1.11.0 (2021/10/24)
-    <ul>
-      <li>add colors to Collapse All icon.</li>
-      <li>add colors to Expand All icon.</li>
-      <li>add colors to Messages icon.</li>
-      <li>add colors to Print icon.</li>
-      <li>add colors to TODO icon.</li>
     </ul>
     ]]>
     </change-notes>
