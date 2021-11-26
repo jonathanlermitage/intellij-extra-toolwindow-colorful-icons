@@ -2,7 +2,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.2.1" // https://github.com/JetBrains/gradle-intellij-plugin and https://lp.jetbrains.com/gradle-intellij-plugin/
+    id("org.jetbrains.intellij") version "1.3.0" // https://github.com/JetBrains/gradle-intellij-plugin and https://lp.jetbrains.com/gradle-intellij-plugin/
     id("com.github.ben-manes.versions") version "0.39.0" // https://github.com/ben-manes/gradle-versions-plugin
 }
 
@@ -16,7 +16,7 @@ val pluginEnableBuildSearchableOptions: String by project
 
 val inCI = System.getenv("CI") != null
 
-println("Will use IDEA $pluginIdeaVersion and Java $pluginJavaVersion")
+logger.quiet("Will use IDEA $pluginIdeaVersion and Java $pluginJavaVersion")
 
 group = "lermitage.intellij.extratci"
 version = pluginVersion
@@ -54,17 +54,28 @@ tasks {
             componentSelection {
                 all {
                     if (isNonStable(candidate.version)) {
-                        println(" - [ ] ${candidate.module}:${candidate.version} candidate rejected")
+                        logger.debug(" - [ ] ${candidate.module}:${candidate.version} candidate rejected")
                         reject("Not stable")
                     } else {
-                        println(" - [X] ${candidate.module}:${candidate.version} candidate accepted")
+                        logger.debug(" - [X] ${candidate.module}:${candidate.version} candidate accepted")
                     }
                 }
             }
         }
     }
     runIde {
-        jvmArgs = listOf("-Xms768m", "-Xmx2048m", "--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
+        jvmArgs("-Xms128m")
+        jvmArgs("-Xmx1024m")
+        jvmArgs("--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
+        // copy over some JVM args from IntelliJ
+        jvmArgs("-Dide.no.platform.update=true")
+        jvmArgs("-Djdk.attach.allowAttachSelf=true")
+        jvmArgs("-Djdk.module.illegalAccess.silent=true")
+        jvmArgs("-Dsun.io.useCanonCaches=false")
+        jvmArgs("-XX:+UseG1GC")
+        jvmArgs("-XX:CICompilerCount=2")
+        jvmArgs("-XX:ReservedCodeCacheSize=512m")
+        jvmArgs("-XX:SoftRefLRUPolicyMSPerMB=50")
     }
     buildSearchableOptions {
         enabled = pluginEnableBuildSearchableOptions.toBoolean()

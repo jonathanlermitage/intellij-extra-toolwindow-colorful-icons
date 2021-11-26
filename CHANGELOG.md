@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.13.0 (2021/11/26)
+* add colors to Bookmarks icon (2021.3+).
+
 ## 1.12.0 (2021/10/30)
 * add colors to Back icon.
 * add colors to Cut icon.
