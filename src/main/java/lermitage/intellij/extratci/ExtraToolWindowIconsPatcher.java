@@ -107,6 +107,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("toolWindowBookmarks.svg", "/extratci/icons/custom/toolWindowBookmarks.svg");
         icons.put("cwmAccessDotOff.svg", "/extratci/icons/custom/cwmAccessDotOff.svg");
         icons.put("cwmAccessOff.svg", "/extratci/icons/custom/cwmAccessOff.svg");
+        icons.put("gradleFile.svg", "/extratci/icons/custom/gradleFile.svg");
+        icons.put("kotlin.svg", "/extratci/icons/custom/kotlin.svg");
 
         return icons;
     }
