@@ -4,6 +4,7 @@
 * add colors to CodeWithMe Access Off icon.
 * add colors to Gradle icon.
 * add colors to Kotlin icon.
+* config panel: minor UI improvements.
 
 ## 1.13.0 (2021/11/26)
 * add colors to Bookmarks icon (2021.3+).
