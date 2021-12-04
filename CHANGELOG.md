@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.14.0 (WIP)
+## 1.14.0 (2021/12/04)
 * add colors to CodeWithMe Access Off icon.
 * add colors to Gradle icon.
 * add colors to Kotlin icon.
