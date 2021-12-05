@@ -15,6 +15,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.15.0 (WIP)
+    <ul>
+      <li>rework the Collapse All icon.</li>
+    </ul>
     1.14.0 (2021/12/04)
     <ul>
       <li>add colors to CodeWithMe Access Off icon.</li>
