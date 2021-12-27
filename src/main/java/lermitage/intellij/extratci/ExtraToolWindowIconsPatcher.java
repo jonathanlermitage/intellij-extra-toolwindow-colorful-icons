@@ -109,6 +109,9 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("cwmAccessOff.svg", "/extratci/icons/custom/cwmAccessOff.svg");
         icons.put("gradleFile.svg", "/extratci/icons/custom/gradleFile.svg");
         icons.put("kotlin.svg", "/extratci/icons/custom/kotlin.svg");
+        icons.put("webServerToolWindow.svg", "/extratci/icons/custom/webServerToolWindow.svg");
+        icons.put("connected.svg", "/extratci/icons/custom/connected.svg"); // IDE Settings sync status
+        icons.put("addList.svg", "/extratci/icons/custom/addList.svg");
 
         return icons;
     }
