@@ -15,9 +15,13 @@
     </description>
 
     <change-notes><![CDATA[
-    1.15.0 (WIP)
+    1.15.0 (2021/12/27)
     <ul>
       <li>rework the Collapse All icon.</li>
+      <li>add colors to Feature Trainer icon.</li>
+      <li>add colors to Remote Host icon.</li>
+      <li>add colors to Cloud Config (connected) icon.</li>
+      <li>add colors to Add to List icon.</li>
     </ul>
     1.14.0 (2021/12/04)
     <ul>

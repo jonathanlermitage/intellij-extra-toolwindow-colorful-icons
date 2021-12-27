@@ -1,7 +1,11 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.15.0 (WIP)
+## 1.15.0 (2021/12/27)
 * rework the Collapse All icon.
+* add colors to Feature Trainer icon.
+* add colors to Remote Host icon.
+* add colors to Cloud Config (connected) icon.
+* add colors to Add to List icon.
 
 ## 1.14.0 (2021/12/04)
 * add colors to CodeWithMe Access Off icon.
