@@ -15,6 +15,13 @@
     </description>
 
     <change-notes><![CDATA[
+    1.16.0 (2022/02/20)
+    <ul>
+      <li>add colors to Add to dictionary icon.</li>
+      <li>add colors to Close icons.</li>
+      <li>add colors to Scroll Up and Scroll Down icons.</li>
+      <li>add colors to Toggle Soft Wrap icon.</li>
+    </ul>
     1.15.0 (2021/12/27)
     <ul>
       <li>rework the Collapse All icon.</li>
@@ -22,24 +29,6 @@
       <li>add colors to Remote Host icon.</li>
       <li>add colors to Cloud Config (connected) icon.</li>
       <li>add colors to Add to List icon.</li>
-    </ul>
-    1.14.0 (2021/12/04)
-    <ul>
-      <li>add colors to CodeWithMe Access Off icon.</li>
-      <li>add colors to Gradle icon.</li>
-      <li>add colors to Kotlin icon.</li>
-      <li>config panel: minor UI improvements.</li>
-    </ul>
-    1.13.0 (2021/11/26)
-    <ul>
-      <li>add colors to Bookmarks icon (2021.3+).</li>
-    </ul>
-    1.12.0 (2021/10/30)
-    <ul>
-      <li>add colors to Back icon.</li>
-      <li>add colors to Cut icon.</li>
-      <li>add colors to Redo icon.</li>
-      <li>add colors to Undo icon.</li>
     </ul>
     ]]>
     </change-notes>

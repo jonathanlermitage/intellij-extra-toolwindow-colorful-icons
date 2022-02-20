@@ -24,7 +24,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     public static Map<String, String> allIcons() {
         Map<String, String> icons = new HashMap<>();
 
-        // icons copied from ToolWindow Colorful Icons plugin
+        // icons copied from ToolWindow Colorful Icons (JetBrains plugin)
         icons.put("CMakeToolWindow.svg", "/extratci/icons/original/CIDR/clion/resources/icons/CMakeToolWindow.svg");
         icons.put("toolWindowProject_AS.svg", "/extratci/icons/original/community/android/adt-branding/src/artwork/toolWindowProject_AS.svg");
         icons.put("androidToolWindow.svg", "/extratci/icons/original/community/android/artwork/resources/icons/androidToolWindow.svg");
@@ -112,6 +112,17 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("webServerToolWindow.svg", "/extratci/icons/custom/webServerToolWindow.svg");
         icons.put("connected.svg", "/extratci/icons/custom/connected.svg"); // IDE Settings sync status
         icons.put("addList.svg", "/extratci/icons/custom/addList.svg");
+        //icons.put("notifications.svg", "/extratci/icons/custom/notifications.svg");
+        //icons.put("notificationsNew.svg", "/extratci/icons/custom/notificationsNew.svg");
+        //icons.put("notificationsNewImportant.svg", "/extratci/icons/custom/notificationsNewImportant.svg");
+        icons.put("close.svg", "/extratci/icons/custom/close.svg");
+        icons.put("closeDarkGrey.svg", "/extratci/icons/custom/closeDarkGrey.svg");
+        icons.put("closeHover.svg", "/extratci/icons/custom/closeHover.svg");
+        icons.put("closeHovered.svg", "/extratci/icons/custom/closeHovered.svg");
+        icons.put("addToDictionary.svg", "/extratci/icons/custom/addToDictionary.svg");
+        icons.put("scroll_down.svg", "/extratci/icons/custom/scroll_down.svg");
+        icons.put("scroll_up.svg", "/extratci/icons/custom/scroll_up.svg");
+        icons.put("toggleSoftWrap.svg", "/extratci/icons/custom/toggleSoftWrap.svg");
 
         return icons;
     }

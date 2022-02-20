@@ -1,5 +1,11 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.16.0 (2022/02/20)
+* add colors to Add to dictionary icon.
+* add colors to Close icons.
+* add colors to Scroll Up and Scroll Down icons.
+* add colors to Toggle Soft Wrap icon.
+
 ## 1.15.0 (2021/12/27)
 * rework the Collapse All icon.
 * add colors to Feature Trainer icon.
