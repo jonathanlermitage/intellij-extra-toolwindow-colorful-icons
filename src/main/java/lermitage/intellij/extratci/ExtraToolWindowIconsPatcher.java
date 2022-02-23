@@ -117,7 +117,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         //icons.put("notificationsNewImportant.svg", "/extratci/icons/custom/notificationsNewImportant.svg");
         icons.put("close.svg", "/extratci/icons/custom/close.svg");
         icons.put("closeDarkGrey.svg", "/extratci/icons/custom/closeDarkGrey.svg");
-        icons.put("closeHover.svg", "/extratci/icons/custom/closeHover.svg");
         icons.put("closeHovered.svg", "/extratci/icons/custom/closeHovered.svg");
         icons.put("addToDictionary.svg", "/extratci/icons/custom/addToDictionary.svg");
         icons.put("scroll_down.svg", "/extratci/icons/custom/scroll_down.svg");

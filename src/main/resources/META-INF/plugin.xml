@@ -15,6 +15,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.17.0 (2022/02/23)
+    <ul>
+      <li>remove the unwanted customization of the "close on hover" button of the IDE window.</li>
+    </ul>
     1.16.0 (2022/02/20)
     <ul>
       <li>add colors to Add to dictionary icon.</li>
