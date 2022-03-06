@@ -115,9 +115,11 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         //icons.put("notifications.svg", "/extratci/icons/custom/notifications.svg");
         //icons.put("notificationsNew.svg", "/extratci/icons/custom/notificationsNew.svg");
         //icons.put("notificationsNewImportant.svg", "/extratci/icons/custom/notificationsNewImportant.svg");
-        icons.put("close.svg", "/extratci/icons/custom/close.svg");
-        icons.put("closeDarkGrey.svg", "/extratci/icons/custom/closeDarkGrey.svg");
-        icons.put("closeHovered.svg", "/extratci/icons/custom/closeHovered.svg");
+        icons.put("actions/close.svg", "/extratci/icons/custom/actions_close.svg");
+        icons.put("actions/closeDarkGrey.svg", "/extratci/icons/custom/actions_closeDarkGrey.svg");
+        icons.put("actions/closeHovered.svg", "/extratci/icons/custom/actions_closeHovered.svg");
+        icons.put("ide/notification/close.svg", "/extratci/icons/custom/notification_close.svg");
+        icons.put("ide/notification/closeHover.svg", "/extratci/icons/custom/notification_closeHover.svg");
         icons.put("addToDictionary.svg", "/extratci/icons/custom/addToDictionary.svg");
         icons.put("scroll_down.svg", "/extratci/icons/custom/scroll_down.svg");
         icons.put("scroll_up.svg", "/extratci/icons/custom/scroll_up.svg");
@@ -139,11 +141,17 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
-        String iconOriginalPath = (new File(path)).getName();
+        String fileName = (new File(path)).getName();
         if (icons == null) {
             loadConfig();
         }
-        return this.icons.get(iconOriginalPath);
+        if (this.icons.containsKey(fileName)) {
+            return this.icons.get(fileName);
+        }
+        if (path.startsWith("/") && path.length() > 2) {
+            path = path.substring(1);
+        }
+        return this.icons.get(path);
     }
 
     private void loadConfig() {

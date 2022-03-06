@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.18.0 (2022/03/06)
+* improve support of various "close" icons.
+
 ## 1.17.0 (2022/02/23)
 * remove the unwanted customization of the "close on hover" button of the IDE window.
 
