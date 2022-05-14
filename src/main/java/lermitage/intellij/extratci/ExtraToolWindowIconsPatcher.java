@@ -124,6 +124,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("scroll_down.svg", "/extratci/icons/custom/scroll_down.svg");
         icons.put("scroll_up.svg", "/extratci/icons/custom/scroll_up.svg");
         icons.put("toggleSoftWrap.svg", "/extratci/icons/custom/toggleSoftWrap.svg");
+        icons.put("cherryPick.svg", "/extratci/icons/custom/cherryPick.svg");
 
         return icons;
     }

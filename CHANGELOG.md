@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.19.0 (2022/05/14)
+* add colors to CherryPick icon.
+
 ## 1.18.0 (2022/03/06)
 * improve support of various "close" icons.
 
