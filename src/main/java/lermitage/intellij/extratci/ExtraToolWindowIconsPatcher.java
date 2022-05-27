@@ -125,6 +125,9 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("scroll_up.svg", "/extratci/icons/custom/scroll_up.svg");
         icons.put("toggleSoftWrap.svg", "/extratci/icons/custom/toggleSoftWrap.svg");
         icons.put("cherryPick.svg", "/extratci/icons/custom/cherryPick.svg");
+        icons.put("delete.svg", "/extratci/icons/custom/delete.svg");
+        icons.put("gc.svg", "/extratci/icons/custom/delete.svg");
+        icons.put("deleteHovered.svg", "/extratci/icons/custom/deleteHovered.svg");
 
         return icons;
     }
@@ -142,6 +145,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
+        LOG.info("------patchPath------ " + path);
         String fileName = (new File(path)).getName();
         if (icons == null) {
             loadConfig();

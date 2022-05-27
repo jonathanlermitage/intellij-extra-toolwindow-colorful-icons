@@ -15,6 +15,11 @@
     </description>
 
     <change-notes><![CDATA[
+    1.20.0 (WIP)
+    <ul>
+      <li>add colors to Delete icon.</li>
+      <li>add colors to GC icon (notably used by the Kubernetes plugin to delete components).</li>
+    </ul>
     1.19.0 (2022/05/14)
     <ul>
       <li>add colors to CherryPick icon.</li>

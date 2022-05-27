@@ -1,5 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.20.0 (WIP)
+* add colors to Delete icon.
+* add colors to GC icon (notably used by the Kubernetes plugin to delete components).
+
 ## 1.19.0 (2022/05/14)
 * add colors to CherryPick icon.
 
