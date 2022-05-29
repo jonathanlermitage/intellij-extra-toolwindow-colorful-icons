@@ -3,6 +3,7 @@
 ## 1.20.0 (WIP)
 * add colors to Delete icon.
 * add colors to GC icon (notably used by the Kubernetes plugin to delete components).
+* add colors to multiple Pin (pinned tab, etc.) icons.
 
 ## 1.19.0 (2022/05/14)
 * add colors to CherryPick icon.
