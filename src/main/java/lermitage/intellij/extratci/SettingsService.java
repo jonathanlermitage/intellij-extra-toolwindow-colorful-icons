@@ -32,7 +32,7 @@ public class SettingsService implements PersistentStateComponent<SettingsService
         return ApplicationManager.getApplication().getService(SettingsService.class);
     }
 
-    public static Map<String, String> getAllIcons() {
+    public static Map<String, IconItem> getAllIcons() {
         return ExtraToolWindowIconsPatcher.allIcons();
     }
 

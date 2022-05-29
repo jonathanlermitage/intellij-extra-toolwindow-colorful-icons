@@ -49,14 +49,15 @@ public class SettingsForm implements Configurable {
     private void loadIconsTable() {
         iconsTableModel = new IconsTableModel();
         iconsTableModel.addTableModelListener(e -> modified = true);
-        Map<String, String> allIcons = SettingsService.getAllIcons();
+        Map<String, IconItem> allIcons = SettingsService.getAllIcons();
         List<String> disabledIconNames = SettingsService.getInstance().getDisabledIcons();
         allIcons.keySet()
             .stream().sorted(Comparator.comparing(String::toLowerCase))
             .forEach(iconName -> iconsTableModel.addRow(new Object[]{
-                    IconLoader.getIcon(allIcons.get(iconName), SettingsForm.class),
+                    IconLoader.getIcon(allIcons.get(iconName).getIcon(), SettingsForm.class),
                     !disabledIconNames.contains(iconName),
-                    iconName
+                    iconName,
+                    allIcons.get(iconName).getDescription()
                 })
             );
         iconsTable.setEnabled(true);
@@ -66,10 +67,12 @@ public class SettingsForm implements Configurable {
         iconsTable.setRowSelectionAllowed(true);
         iconsTable.setModel(iconsTableModel);
         iconsTable.setRowHeight(28);
-        iconsTable.getColumnModel().getColumn(IconsTableModel.ICON_PREVIEW_ROW_NUMBER).setMaxWidth(28);
         iconsTable.getColumnModel().getColumn(IconsTableModel.ICON_PREVIEW_ROW_NUMBER).setWidth(28);
+        iconsTable.getColumnModel().getColumn(IconsTableModel.ICON_PREVIEW_ROW_NUMBER).setMaxWidth(28);
         iconsTable.getColumnModel().getColumn(IconsTableModel.ICON_ENABLED_ROW_NUMBER).setWidth(28);
         iconsTable.getColumnModel().getColumn(IconsTableModel.ICON_ENABLED_ROW_NUMBER).setMaxWidth(28);
+        //iconsTable.getColumnModel().getColumn(IconsTableModel.ICON_DESCRIPTION_ROW_NUMBER).setWidth(100);
+        //iconsTable.getColumnModel().getColumn(IconsTableModel.ICON_DESCRIPTION_ROW_NUMBER).setMaxWidth(300);
     }
 
     @Nls(capitalization = Nls.Capitalization.Title)

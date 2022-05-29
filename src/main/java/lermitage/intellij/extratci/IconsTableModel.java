@@ -15,15 +15,15 @@ public class IconsTableModel extends DefaultTableModel {
      * Table columns type.
      */
     @SuppressWarnings("unchecked")
-    private final Class<Object>[] types = new Class[]{Icon.class, Boolean.class, String.class};
+    private final Class<Object>[] types = new Class[]{Icon.class, Boolean.class, String.class, String.class};
 
     /**
      * Indicates if table columns are editable.
      */
-    private final boolean[] canEdit = new boolean[]{false, true, false};
+    private final boolean[] canEdit = new boolean[]{false, true, false, false};
 
     public IconsTableModel() {
-        super(new Object[][]{}, new String[]{"", "", "Icon Name"});
+        super(new Object[][]{}, new String[]{"", "", "Icon Name", "Description"});
     }
 
     @Override
