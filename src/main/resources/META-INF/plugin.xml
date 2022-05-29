@@ -20,6 +20,7 @@
       <li>add colors to Delete icon.</li>
       <li>add colors to GC icon (notably used by the Kubernetes plugin to delete components).</li>
       <li>add colors to multiple Pin (pinned tab, etc.) icons.</li>
+      <li>config panel GUI: add a description for some icons.</i>
     </ul>
     1.19.0 (2022/05/14)
     <ul>

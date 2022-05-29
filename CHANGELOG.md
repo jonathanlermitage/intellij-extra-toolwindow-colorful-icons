@@ -4,6 +4,7 @@
 * add colors to Delete icon.
 * add colors to GC icon (notably used by the Kubernetes plugin to delete components).
 * add colors to multiple Pin (pinned tab, etc.) icons.
+* config panel GUI: add a description for some icons.
 
 ## 1.19.0 (2022/05/14)
 * add colors to CherryPick icon.
