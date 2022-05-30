@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.20.0 (WIP)
+## 1.20.0 (2022/05/29)
 * add colors to Delete icon.
 * add colors to GC icon (notably used by the Kubernetes plugin to delete components).
 * add colors to multiple Pin (pinned tab, etc.) icons.
