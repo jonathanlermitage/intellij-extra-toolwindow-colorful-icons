@@ -15,6 +15,10 @@
     </description>
 
     <change-notes><![CDATA[
+    1.20.1 (2022/06/05) - for the new UI preview only in IJ 2022.2+ EAP (222.2889.14+)
+    <ul>
+      <li>prevent crash with the new IntelliJ UI (currently in preview). Please note that most icons don't work because the new IDE icons have a temporary name. Expect improvements once JetBrains has finalized the new UI.</li>
+    </ul>
     1.20.0 (2022/05/29)
     <ul>
       <li>add colors to Delete icon.</li>
@@ -53,7 +57,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="201.6668.113"/>
+    <idea-version since-build="222.2889.14"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->

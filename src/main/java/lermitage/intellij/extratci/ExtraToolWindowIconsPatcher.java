@@ -114,9 +114,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("webServerToolWindow.svg", of("extratci/icons/custom/webServerToolWindow.svg"));
         icons.put("connected.svg", of("extratci/icons/custom/connected.svg", "IDE settings sync status (bottom right corner)"));
         icons.put("addList.svg", of("extratci/icons/custom/addList.svg"));
-        //icons.put("notifications.svg", IconItem.of("extratci/icons/custom/notifications.svg"));
-        //icons.put("notificationsNew.svg", IconItem.of("extratci/icons/custom/notificationsNew.svg"));
-        //icons.put("notificationsNewImportant.svg", IconItem.of("extratci/icons/custom/notificationsNewImportant.svg"));
         icons.put("actions/close.svg", of("extratci/icons/custom/actions_close.svg"));
         icons.put("actions/closeDarkGrey.svg", of("extratci/icons/custom/actions_closeDarkGrey.svg"));
         icons.put("actions/closeHovered.svg", of("extratci/icons/custom/actions_closeHovered.svg"));
