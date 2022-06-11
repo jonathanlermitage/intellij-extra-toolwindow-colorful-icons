@@ -16,6 +16,8 @@ val pluginEnableBuildSearchableOptions: String by project
 
 val inCI = System.getenv("CI") != null
 
+val junitVersion = "5.8.2"
+
 logger.quiet("Will use IDEA $pluginIdeaVersion and Java $pluginJavaVersion")
 
 group = "lermitage.intellij.extratci"
@@ -26,6 +28,8 @@ repositories {
 }
 
 dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
 intellij {
@@ -42,6 +46,9 @@ tasks {
         sourceCompatibility = pluginJavaVersion
         targetCompatibility = pluginJavaVersion
         options.compilerArgs = listOf("-Xlint:deprecation")
+    }
+    withType<Test> {
+        useJUnitPlatform()
     }
     withType<DependencyUpdatesTask> {
         checkForGradleUpdate = true

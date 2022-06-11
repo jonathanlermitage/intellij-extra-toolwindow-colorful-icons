@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.21.0 (WIP)
+* prevent a crash with the new IntelliJ UI (currently in preview) for IntelliJ 2022.2+ EAP (222.2889.14+).
+
 ## 1.20.0 (2022/05/29)
 * add colors to Delete icon.
 * add colors to GC icon (notably used by the Kubernetes plugin to delete components).
