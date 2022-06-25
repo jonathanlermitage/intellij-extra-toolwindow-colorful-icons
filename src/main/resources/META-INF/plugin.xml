@@ -15,7 +15,7 @@
     </description>
 
     <change-notes><![CDATA[
-    1.21.0 (WIP)
+    1.21.0 (2022/06/25)
     <ul>
       <li>prevent a crash with the new IntelliJ UI (currently in preview) for IntelliJ 2022.2+ EAP (222.2889.14+).</li>
       <li>rework Dependencies icons.</li>
