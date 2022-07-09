@@ -18,7 +18,7 @@
     1.22.0 (2022/07/09)
     <ul>
       <li>fix compatibility with IDEs based on IJ 2020 and 2021 (like Android Studio).</li>
-      <li>this build is compatible with IDE &gt;=2020.1 and &lt;2022.1.</li>
+      <li>this build is compatible with IDE &gt;=2020.1 and &lt;2022.2.</li>
     </ul>
     1.21.0 (2022/06/25)
     <ul>
