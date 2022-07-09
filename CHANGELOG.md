@@ -1,5 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.22.0 (2022/07/09)
+* fix compatibility with IDEs based on IJ 2020 and 2021 (like Android Studio).
+* this build is compatible with IDE `>=2020.1` and `<2022.2`.
+
 ## 1.21.0 (2022/06/25)
 * prevent a crash with the new IntelliJ UI (currently in preview) for IntelliJ 2022.2+ EAP (222.2889.14+).
 * rework Dependencies icons.

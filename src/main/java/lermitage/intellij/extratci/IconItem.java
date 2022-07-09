@@ -14,12 +14,16 @@ public class IconItem {
     }
 
     public static IconItem of(String icon) {
-        return new IconItem(icon, "");
+        // TODO the "/" prefix is here for compatibility with older IDE versions only (2020 and 2021).
+        //  We should remove this prefix the day the minimal IDE version is set to 2022
+        //return new IconItem(icon, "");
+        return new IconItem("/" + icon, "");
     }
 
     public IconItem(String icon, String description) {
         this.icon = icon;
         this.description = description;
+
     }
 
     public String getIcon() {
