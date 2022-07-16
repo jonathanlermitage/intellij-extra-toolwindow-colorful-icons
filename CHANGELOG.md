@@ -1,5 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.23.0 (WIP)
+* add colors to Branch Node icon.
+* found a way to continue to support IDEs based on IJ 2020 and 2021. IDE build number is detected at runtime and code is adapted when needed.
+
 ## 1.22.0 (2022/07/09)
 * fix compatibility with IDEs based on IJ 2020 and 2021 (like Android Studio).
 * this build is compatible with IDE `>=2020.1` and `<2022.2`.

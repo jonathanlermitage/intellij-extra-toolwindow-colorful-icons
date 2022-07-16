@@ -15,57 +15,21 @@
     </description>
 
     <change-notes><![CDATA[
+    1.23.0 (WIP)
+    <ul>
+      <li>add colors to Branch Node icon.</li>
+      <li>found a way to continue to support IDEs based on IJ 2020 and 2021. IDE build number is detected at runtime and code is adapted when needed.</li>
+    </ul>
     1.22.0 (2022/07/09)
     <ul>
       <li>fix compatibility with IDEs based on IJ 2020 and 2021 (like Android Studio).</li>
       <li>this build is compatible with IDE &gt;=2020.1 and &lt;2022.2.</li>
     </ul>
-    1.21.0 (2022/06/25)
-    <ul>
-      <li>prevent a crash with the new IntelliJ UI (currently in preview) for IntelliJ 2022.2+ EAP (222.2889.14+).</li>
-      <li>rework Dependencies icons.</li>
-      <li>rework Gradle icons.</li>
-    </ul>
-    1.20.0 (2022/05/29)
-    <ul>
-      <li>add colors to Delete icon.</li>
-      <li>add colors to GC icon (notably used by the Kubernetes plugin to delete components).</li>
-      <li>add colors to multiple Pin (pinned tab, etc.) icons.</li>
-      <li>config panel GUI: add a description for some icons.</i>
-    </ul>
-    1.19.0 (2022/05/14)
-    <ul>
-      <li>add colors to CherryPick icon.</li>
-    </ul>
-    1.18.0 (2022/03/06)
-    <ul>
-      <li>improve support of various "close" icons.</li>
-    </ul>
-    1.17.0 (2022/02/23)
-    <ul>
-      <li>remove the unwanted customization of the "close on hover" button of the IDE window.</li>
-    </ul>
-    1.16.0 (2022/02/20)
-    <ul>
-      <li>add colors to Add to dictionary icon.</li>
-      <li>add colors to Close icons.</li>
-      <li>add colors to Scroll Up and Scroll Down icons.</li>
-      <li>add colors to Toggle Soft Wrap icon.</li>
-    </ul>
-    1.15.0 (2021/12/27)
-    <ul>
-      <li>rework the Collapse All icon.</li>
-      <li>add colors to Feature Trainer icon.</li>
-      <li>add colors to Remote Host icon.</li>
-      <li>add colors to Cloud Config (connected) icon.</li>
-      <li>add colors to Add to List icon.</li>
-    </ul>
     ]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="201.6668.113" until-build="221.*"/>
-    <!--idea-version since-build="222"/-->
+    <idea-version since-build="201.6668.113"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->

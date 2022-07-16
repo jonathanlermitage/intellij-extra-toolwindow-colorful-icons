@@ -2,6 +2,7 @@
 
 package lermitage.intellij.extratci;
 
+import com.intellij.openapi.application.ApplicationInfo;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.util.IconPathPatcher;
@@ -73,7 +74,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("toolWindowProblemsEmpty.svg", of("extratci/icons/custom/problemsEmpty.svg"));
         icons.put("problemsEmpty.svg", of("extratci/icons/custom/problemsEmpty.svg"));
         icons.put("toolWindowProject.svg", of("extratci/icons/custom/toolWindowProject.svg"));
-        icons.put("branch.svg", of("extratci/icons/custom/branch.svg"));
+        icons.put("branch.svg", of("extratci/icons/custom/branch.svg", "VCS branch selector (IDE's bottom-right corner)"));
+        icons.put("branchNode.svg", of("extratci/icons/custom/branch.svg", "Branch nodes in VCS Log > Branches"));
         icons.put("makefileToolWindow.svg", of("extratci/icons/custom/makefileToolWindow.svg"));
         icons.put("intentionBulbGrey.svg", of("extratci/icons/custom/intentionBulb.svg"));
         icons.put("menu-saveall.svg", of("extratci/icons/custom/menu-saveall.svg"));
@@ -176,7 +178,23 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         int allIconsSize = enabledIcons.size();
         List<String> disabledIcons = SettingsService.getInstance().getDisabledIcons();
         disabledIcons.forEach(enabledIcons::remove);
-        icons = enabledIcons;
+
+        // Starting with IJ 2022 (build 221+), resource path must not start with a leading "/". On older IJ versions, resource
+        // path has to start with a leading "/". A solution would be to support IJ 2022+ only, but we can easily
+        // detect IDE build version and adapt icons path when needed.
+        String buildVersion = ApplicationInfo.getInstance().getBuild().asStringWithoutProductCode();
+        if (buildVersion.startsWith("20") || buildVersion.startsWith("21")) {
+            LOG.info("Detected IDE build version " + buildVersion + ". This is an old build (<221). " +
+                "Will adapt code in order to customize IDE icons correctly.");
+            Map<String, IconItem> fixedEnabledIcons = new HashMap<>();
+            enabledIcons.forEach((ideIconName, customIcon) -> fixedEnabledIcons.put(
+                ideIconName,
+                IconItem.of("/" + customIcon.getIcon(), customIcon.getDescription())));
+            icons = fixedEnabledIcons;
+        } else {
+            icons = enabledIcons;
+        }
+
         LOG.info("config loaded with success, enabled " + icons.size() + "/" + allIconsSize + " items");
     }
 }
