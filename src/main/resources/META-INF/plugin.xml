@@ -5,8 +5,7 @@
     <vendor email="jonathan.lermitage@gmail.com" url="https://github.com/jonathanlermitage">Jonathan Lermitage</vendor>
 
     <description><![CDATA[
-      Makes tool window icons colorful. This plugin is based on the ToolWindow Colorful Icons plugin, and adds some additional icons.<br/>
-      See <i>Settings &gt; Appearance &amp; Behavior &gt; Extra ToolWindow Colorful Icons</i> to select icons to (de)activate.<br/>
+      Makes tool window icons colorful. This plugin is based on the ToolWindow Colorful Icons plugin, and adds some icons. You can also choose icons to (de)activate: see <i>Settings &gt; Appearance &amp; Behavior &gt; Extra ToolWindow Colorful Icons</i>.<br/>
       If you find this plugin helpful, you can <a href="https://buymeacoff.ee/jlermitage">buy me a coffee</a>. <b>Thank you! 👍</b><br/><br/>
       See <a href="https://github.com/jonathanlermitage/intellij-extra-toolwindow-colorful-icons/blob/main/CHANGELOG.md">changelog</a>
       and <a href="https://github.com/jonathanlermitage/intellij-extra-toolwindow-colorful-icons/blob/main/README.md">readme</a> on GitHub.
