@@ -2,9 +2,9 @@
 
 ## 1.24.0 (WIP)
 * add colors to File Transfer icons.
-* add colors to Endpoints Action icons.
-* add colors to Spring Boot Endpoint icons.
-* add colors to Endpoints icons.
+* add colors to Endpoints Action icon.
+* add colors to Spring Boot Endpoint icon.
+* add colors to Endpoints icon.
 
 ## 1.23.0 (2022/07/23)
 * add colors to Branch Node icon.
