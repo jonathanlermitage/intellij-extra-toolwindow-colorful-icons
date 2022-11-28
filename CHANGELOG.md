@@ -1,5 +1,11 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.24.0 (WIP)
+* add colors to File Transfer icons.
+* add colors to Endpoints Action icons.
+* add colors to Spring Boot Endpoint icons.
+* add colors to Endpoints icons.
+
 ## 1.23.0 (2022/07/23)
 * add colors to Branch Node icon.
 * found a way to continue to support IDEs based on IJ 2020 and 2021. IDE build number is detected at runtime and code is adapted when needed.
