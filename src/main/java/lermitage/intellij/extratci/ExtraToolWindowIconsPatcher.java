@@ -137,6 +137,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("endpointsAction.svg", of("extratci/icons/custom/endpointsAction.svg"));
         icons.put("SpringBootEndpoint.svg", of("extratci/icons/custom/SpringBootEndpoint.svg"));
         icons.put("toolWindowEndpoints.svg", of("extratci/icons/custom/toolWindowEndpoints.svg"));
+        icons.put("download.svg", of("extratci/icons/custom/download.svg"));
+        icons.put("upload.svg", of("extratci/icons/custom/upload.svg"));
 
         return icons;
     }

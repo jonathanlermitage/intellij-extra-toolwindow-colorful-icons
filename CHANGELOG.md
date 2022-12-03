@@ -5,6 +5,8 @@
 * add colors to Endpoints Action icon.
 * add colors to Spring Boot Endpoint icon.
 * add colors to Endpoints icon.
+* add colors to Download icon.
+* add colors to Upload icon.
 
 ## 1.23.0 (2022/07/23)
 * add colors to Branch Node icon.

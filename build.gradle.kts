@@ -73,7 +73,6 @@ tasks {
     runIde {
         jvmArgs("-Xms128m")
         jvmArgs("-Xmx1024m")
-        jvmArgs("--add-exports", "java.desktop/sun.awt.windows=ALL-UNNAMED")
     }
     buildSearchableOptions {
         enabled = pluginEnableBuildSearchableOptions.toBoolean()
