@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.24.0 (WIP)
+## 1.24.0 (2022/12/03)
 * add colors to File Transfer icons.
 * add colors to Endpoints Action icon.
 * add colors to Spring Boot Endpoint icon.
