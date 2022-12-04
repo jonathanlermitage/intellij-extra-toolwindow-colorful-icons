@@ -17,5 +17,5 @@ jobs:
           ide-versions: |
             ideaIC:2020.1.4
             ideaIU:2020.1.4
-            ideaIC:2022.1.1
-            ideaIU:2022.1.1
+            ideaIC:2022.2.4
+            ideaIU:2022.2.4
