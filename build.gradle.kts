@@ -1,3 +1,5 @@
+import com.github.benmanes.gradle.versions.reporter.PlainTextReporter
+import com.github.benmanes.gradle.versions.reporter.result.Result
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
@@ -53,21 +55,17 @@ tasks {
     withType<DependencyUpdatesTask> {
         checkForGradleUpdate = true
         gradleReleaseChannel = "current"
-        outputFormatter = "plain"
-        outputDir = "build"
-        reportfileName = "dependencyUpdatesReport"
         revision = "release"
-        resolutionStrategy {
-            componentSelection {
-                all {
-                    if (isNonStable(candidate.version)) {
-                        logger.debug(" - [ ] ${candidate.module}:${candidate.version} candidate rejected")
-                        reject("Not stable")
-                    } else {
-                        logger.debug(" - [X] ${candidate.module}:${candidate.version} candidate accepted")
-                    }
-                }
+        rejectVersionIf {
+            isNonStable(candidate.version)
+        }
+        outputFormatter = closureOf<Result> {
+            unresolved.dependencies.removeIf {
+                val coordinates = "${it.group}:${it.name}"
+                coordinates.startsWith("unzipped.com") || coordinates.startsWith("com.jetbrains:ideaI")
             }
+            PlainTextReporter(project, revision, gradleReleaseChannel)
+                .write(System.out, this)
         }
     }
     runIde {
