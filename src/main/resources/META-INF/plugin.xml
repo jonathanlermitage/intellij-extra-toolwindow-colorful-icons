@@ -57,8 +57,4 @@
         </component>
     </application-components>
 
-    <actions>
-        <!-- Add your actions here -->
-    </actions>
-
 </idea-plugin>
