@@ -79,7 +79,7 @@ tasks {
 }
 
 fun isNonStable(version: String): Boolean {
-    if (listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().endsWith(it) }) {
+    if (listOf("RELEASE", "FINAL", "GA").any { version.uppercase().endsWith(it) }) {
         return false
     }
     return listOf("alpha", "Alpha", "ALPHA", "b", "beta", "Beta", "BETA", "rc", "RC", "M", "EA", "pr", "atlassian").any {
