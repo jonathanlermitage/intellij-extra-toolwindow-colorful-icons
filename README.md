@@ -16,6 +16,7 @@ IntelliJ IDEA based IDEs plugin that makes tool window icons colorful. This plug
 3. [License](#license)  
 4. [Credits](#credits)  
 
+![Plugin screenshot (new UI)](misc/screenshots/ide_toolbars_expui.png)  
 ![Plugin screenshot](misc/screenshots/ide_toolbars.png)
 
 ## Build
@@ -37,17 +38,3 @@ To finish, don't hesitate to add your name or nickname (and LinkedIn profile, et
 ## License
 
 MIT License. In other words, you can do what you want: this project is entirely OpenSource, Free and Gratis.
-
-## Credits
-
-### 🤝 Contributors
-
-* (author) Jonathan Lermitage (<jonathan.lermitage@gmail.com>, [![linkedin](misc/linkedin_profile_badge.png)](https://www.linkedin.com/in/jonathan-lermitage-092711142/), [buymeacoff.ee](http://buymeacoff.ee/jlermitage))
-
-### 🤝 [JetBrains](https://www.jetbrains.com/idea/)
-
-Thanks for their Open-Source licence to their amazing IDEs.
-
-### 🤝 [Syntevo](https://www.syntevo.com/smartgit/)
-
-Thanks for their licence for **SmartGit** (an excellent graphical Git client, free for non-commercial projects).
