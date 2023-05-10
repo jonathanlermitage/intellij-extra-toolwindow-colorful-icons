@@ -6,7 +6,6 @@
 <p align="center">
     <a href="https://plugins.jetbrains.com/plugin/16604-extra-toolwindow-colorful-icons"><img src="https://img.shields.io/jetbrains/plugin/v/16604-extra-toolwindow-colorful-icons.svg"/></a>
     <a href="https://plugins.jetbrains.com/plugin/16604-extra-toolwindow-colorful-icons"><img src="https://img.shields.io/jetbrains/plugin/d/16604-extra-toolwindow-colorful-icons.svg"/></a>
-    </a>
 </p>
 
 IntelliJ IDEA based IDEs plugin that makes tool window icons colorful. This plugin is based on the [ToolWindow Colorful Icons](https://plugins.jetbrains.com/plugin/10863-toolwindow-colorful-icons) plugin, and **adds some additional icons**.
