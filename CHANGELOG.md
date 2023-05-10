@@ -2,7 +2,7 @@
 
 ## 1.25.0 (2023/05/10)
 * add colors to Hierarchy icon.
-* nota: plugins doesn't work well with the new UI. I am aware of that, and I am investigating this issue. **Any help would be highly appreciated**.
+* nota: plugin doesn't work well with the new UI. I am aware of that, and I am investigating this issue. **Any help would be highly appreciated**.
 * nota: a future plugin update will offer icons dedicated to the new UI. In other words, there will be an option to display old or new UI icons, both colorful.
 
 ## 1.24.0 (2022/12/03)
