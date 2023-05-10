@@ -20,7 +20,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
     private final Logger LOG = Logger.getInstance(getClass().getName());
 
-    private Map<String, IconItem> icons;
+    private Map<String, IconItem> configuredIcons;
 
     @SuppressWarnings("SpellCheckingInspection")
     @NotNull
@@ -139,6 +139,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("toolWindowEndpoints.svg", of("extratci/icons/custom/toolWindowEndpoints.svg"));
         icons.put("download.svg", of("extratci/icons/custom/download.svg"));
         icons.put("upload.svg", of("extratci/icons/custom/upload.svg"));
+        icons.put("toolWindowHierarchy.svg", of("extratci/icons/custom/toolWindowHierarchy.svg"));
 
         return icons;
     }
@@ -157,23 +158,23 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
         //LOG.info("------patchPath------ " + path);
-        if (icons == null) {
+        if (configuredIcons == null) {
             loadConfig();
         }
 
-        if (this.icons.containsKey(path)) {
-            return this.icons.get(path).getIcon();
+        if (configuredIcons.containsKey(path)) {
+            return configuredIcons.get(path).getIcon();
         }
         if (path.startsWith("/") && path.length() > 2) {
             String simplifiedPath = path.substring(1);
-            if (this.icons.containsKey(simplifiedPath)) {
-                return this.icons.get(simplifiedPath).getIcon();
+            if (configuredIcons.containsKey(simplifiedPath)) {
+                return configuredIcons.get(simplifiedPath).getIcon();
             }
         }
 
         String fileName = (new File(path)).getName();
-        if (this.icons.containsKey(fileName)) {
-            return this.icons.get(fileName).getIcon();
+        if (configuredIcons.containsKey(fileName)) {
+            return configuredIcons.get(fileName).getIcon();
         }
 
         return null;
@@ -196,11 +197,11 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
             enabledIcons.forEach((ideIconName, customIcon) -> fixedEnabledIcons.put(
                 ideIconName,
                 IconItem.of("/" + customIcon.getIcon(), customIcon.getDescription())));
-            icons = fixedEnabledIcons;
+            configuredIcons = fixedEnabledIcons;
         } else {
-            icons = enabledIcons;
+            configuredIcons = enabledIcons;
         }
 
-        LOG.info("config loaded with success, enabled " + icons.size() + "/" + allIconsSize + " items");
+        LOG.info("config loaded with success, enabled " + configuredIcons.size() + "/" + allIconsSize + " items");
     }
 }
