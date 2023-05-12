@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.26.0 (WIP)
+* fix support for Pinned Tab icon in recent IDEs.
+
 ## 1.25.0 (2023/05/10)
 * add colors to Hierarchy icon.
 * nota: plugin doesn't work well with the new UI. I am aware of that, and I am investigating this issue. **Any help would be highly appreciated**.

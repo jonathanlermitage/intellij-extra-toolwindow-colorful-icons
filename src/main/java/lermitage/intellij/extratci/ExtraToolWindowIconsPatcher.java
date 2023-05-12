@@ -131,6 +131,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("deleteHovered.svg", of("extratci/icons/custom/deleteHovered.svg"));
         icons.put("pin.svg", of("extratci/icons/custom/pin.svg"));
         icons.put("pin_tab.svg", of("extratci/icons/custom/pin_tab.svg"));
+        icons.put("pinTab.svg", of("extratci/icons/custom/pin.svg"));
         icons.put("pinned_items_favorites.svg", of("extratci/icons/custom/pinned_items_favorites.svg"));
         icons.put("fileTransfer.svg", of("extratci/icons/custom/fileTransfer.svg"));
         icons.put("transferToolWindow.svg", of("extratci/icons/custom/transferToolWindow.svg"));
