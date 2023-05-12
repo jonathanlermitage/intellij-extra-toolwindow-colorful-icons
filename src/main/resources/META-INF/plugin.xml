@@ -13,35 +13,6 @@
     ]]>
     </description>
 
-    <change-notes><![CDATA[
-    1.25.0 (2023/05/10)
-    <ul>
-      <li>add colors to Hierarchy icon.</li>
-      <li>nota: plugin doesn't work well with the new UI. I am aware of that, and I am investigating this issue. <b>Any help would be highly appreciated</b>.</li>
-      <li>nota: a future plugin update will offer icons dedicated to the new UI. In other words, there will be an option to display old or new UI icons, both colorful.</li>
-    </ul>
-    1.24.0 (2022/12/03)
-    <ul>
-      <li>add colors to File Transfer icons.</li>
-      <li>add colors to Endpoints Action icon.</li>
-      <li>add colors to Spring Boot Endpoint icon.</li>
-      <li>add colors to Endpoints icon.</li>
-      <li>add colors to Download icon.</li>
-      <li>add colors to Upload icon.</li>
-    </ul>
-    1.23.0 (2022/07/23)
-    <ul>
-      <li>add colors to Branch Node icon.</li>
-      <li>found a way to continue to support IDEs based on IJ 2020 and 2021. IDE build number is detected at runtime and code is adapted when needed.</li>
-    </ul>
-    1.22.0 (2022/07/09)
-    <ul>
-      <li>fix compatibility with IDEs based on IJ 2020 and 2021 (like Android Studio).</li>
-      <li>this build is compatible with IDE &gt;=2020.1 and &lt;2022.2.</li>
-    </ul>
-    ]]>
-    </change-notes>
-
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="201.6668.113"/>
 
