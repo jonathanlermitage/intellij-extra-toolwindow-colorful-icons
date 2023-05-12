@@ -2,6 +2,7 @@
 
 ## 1.26.0 (WIP)
 * fix support for Pinned Tab icon in recent IDEs.
+* rework colouring of Bookmarks and Pin icons.
 
 ## 1.25.0 (2023/05/10)
 * add colors to Hierarchy icon.
