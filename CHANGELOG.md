@@ -1,8 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.26.0 (WIP)
+## 1.26.0 (2023/06/03)
 * fix support for Pinned Tab icon in recent IDEs.
 * rework colouring of Bookmarks and Pin icons.
+* **new UI support: [up-voting this issue](https://youtrack.jetbrains.com/issue/IDEA-321006/cant-override-IDE-SVG-icons-using-IconPathPatcher-in-newUI) would help**. Thanks!
 
 ## 1.25.0 (2023/05/10)
 * add colors to Hierarchy icon.
