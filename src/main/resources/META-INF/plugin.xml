@@ -14,21 +14,10 @@
     ]]>
     </description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="201.6668.113"/>
+    <idea-version since-build="231"/>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
-        <applicationService serviceImplementation="lermitage.intellij.extratci.SettingsService"/>
-        <applicationConfigurable instance="lermitage.intellij.extratci.SettingsForm"
-                                 id="LermitageExtraTci"
-                                 displayName="Extra ToolWindow Colorful Icons"
-                                 parentId="appearance"/>
-    </extensions>
     <application-components>
         <component>
             <implementation-class>lermitage.intellij.extratci.ExtraToolWindowIconsPatcher</implementation-class>
