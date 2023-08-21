@@ -5,15 +5,21 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ij: [ 2020.1.4, 2022.2.4 ]
+        ij: [ IC-2020.1.4, IC-LATEST-STABLE, IC-LATEST-EAP-SNAPSHOT ]
+
     steps:
       - uses: actions/checkout@v3
+
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: 17
+
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
+        with:
+          gradle-home-cache-cleanup: true
+
       - name: Build and verify
-        run: ./gradlew clean buildPlugin test verifyPlugin -PpluginIdeaVersion=IC-${{ matrix.ij }} --warning-mode all
+        run: ./gradlew clean buildPlugin test verifyPlugin verifypluginconfiguration -PpluginVerifyProductDescriptor=true -PpluginIdeaVersion=${{ matrix.ij }} --warning-mode all

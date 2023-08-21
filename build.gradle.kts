@@ -1,27 +1,38 @@
-import com.adarshr.gradle.testlogger.theme.ThemeType
 import com.github.benmanes.gradle.versions.reporter.PlainTextReporter
 import com.github.benmanes.gradle.versions.reporter.result.Result
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import com.palantir.gradle.gitversion.VersionDetails
 import groovy.lang.Closure
+import org.apache.commons.io.FileUtils
 import org.jetbrains.changelog.Changelog
+import org.w3c.dom.Document
+import java.io.BufferedReader
+import java.io.ByteArrayInputStream
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
+import java.nio.file.Files
+import javax.xml.parsers.DocumentBuilderFactory
+import javax.xml.xpath.XPathConstants
+import javax.xml.xpath.XPathFactory
 
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.13.3" // https://github.com/JetBrains/gradle-intellij-plugin
-    id("org.jetbrains.changelog") version "2.0.0" // https://github.com/JetBrains/gradle-changelog-plugin
-    id("com.github.ben-manes.versions") version "0.46.0" // https://github.com/ben-manes/gradle-versions-plugin
-    id("com.adarshr.test-logger") version "3.2.0" // https://github.com/radarsh/gradle-test-logger-plugin
+    id("org.jetbrains.intellij") version "1.15.0" // https://github.com/JetBrains/gradle-intellij-plugin
+    id("org.jetbrains.changelog") version "2.1.2" // https://github.com/JetBrains/gradle-changelog-plugin
+    id("com.github.ben-manes.versions") version "0.47.0" // https://github.com/ben-manes/gradle-versions-plugin
     id("com.palantir.git-version") version "3.0.0" // https://github.com/palantir/gradle-git-version
+    id("com.github.andygoossens.modernizer") version "1.8.0" // https://github.com/andygoossens/gradle-modernizer-plugin
+    id("biz.lermitage.oga") version "1.1.1"
 }
 
 // Import variables from gradle.properties file
-val pluginIdeaVersion: String by project
 val pluginDownloadIdeaSources: String by project
-val pluginInstrumentPluginCode: String by project
 val pluginVersion: String by project
 val pluginJavaVersion: String by project
-val testLoggerStyle: String by project
+val pluginEnableDebugLogs: String by project
+val pluginClearSandboxedIDESystemLogsBeforeRun: String by project
+val pluginIdeaVersion = detectBestIdeVersion()
 
 version = if (pluginVersion == "auto") {
     val versionDetails: Closure<VersionDetails> by extra
@@ -35,7 +46,7 @@ version = if (pluginVersion == "auto") {
     pluginVersion
 }
 
-logger.quiet("Will use IDEA $pluginIdeaVersion and Java $pluginJavaVersion. Plugin version set to $version.")
+logger.quiet("Will use IDEA $pluginIdeaVersion and Java $pluginJavaVersion. Plugin version set to $version")
 
 group = "lermitage.intellij.extratci"
 
@@ -43,11 +54,13 @@ repositories {
     mavenCentral()
 }
 
-val junitVersion = "5.9.3"
+val junitVersion = "5.10.0"
+val junitPlatformLauncher = "1.10.0"
 
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:$junitPlatformLauncher")
 }
 
 intellij {
@@ -64,18 +77,24 @@ changelog {
     itemPrefix.set("*")
 }
 
-testlogger {
-    try {
-        theme = ThemeType.valueOf(testLoggerStyle)
-    } catch (e: Exception) {
-        theme = ThemeType.PLAIN
-        logger.warn("Invalid testLoggerRichStyle value '$testLoggerStyle', " +
-            "will use PLAIN style instead. Accepted values are PLAIN, STANDARD and MOCHA.")
-    }
-    showSimpleNames = true
+modernizer {
+    includeTestClasses = true
+    // Find exclusion names at https://github.com/gaul/modernizer-maven-plugin/blob/master/modernizer-maven-plugin/src/main/resources/modernizer.xml
+    exclusions = setOf("java/util/Optional.get:()Ljava/lang/Object;")
 }
 
 tasks {
+    register("clearSandboxedIDESystemLogs") {
+        doFirst {
+            if (pluginClearSandboxedIDESystemLogsBeforeRun.toBoolean()) {
+                val sandboxLogDir = File("${rootProject.projectDir}/.idea-sandbox/${shortenIdeVersion(pluginIdeaVersion)}/system/log/")
+                if (sandboxLogDir.exists() && sandboxLogDir.isDirectory) {
+                    FileUtils.deleteDirectory(sandboxLogDir)
+                    logger.quiet("Deleted sandboxed IDE's log folder $sandboxLogDir")
+                }
+            }
+        }
+    }
     withType<JavaCompile> {
         sourceCompatibility = pluginJavaVersion
         targetCompatibility = pluginJavaVersion
@@ -84,6 +103,9 @@ tasks {
     }
     withType<Test> {
         useJUnitPlatform()
+
+        // avoid JBUIScale "Must be precomputed" error, because IDE is not started (LoadingState.APP_STARTED.isOccurred is false)
+        jvmArgs("-Djava.awt.headless=true")
     }
     withType<DependencyUpdatesTask> {
         checkForGradleUpdate = true
@@ -102,12 +124,24 @@ tasks {
         }
     }
     runIde {
+        dependsOn("clearSandboxedIDESystemLogs")
+
         maxHeapSize = "1g" // https://docs.gradle.org/current/dsl/org.gradle.api.tasks.JavaExec.html
 
         // force detection of slow operations in EDT when playing with sandboxed IDE (SlowOperations.assertSlowOperationsAreAllowed)
         jvmArgs("-Dide.slow.operations.assertion=true")
 
+        if (pluginEnableDebugLogs.toBoolean()) {
+            systemProperties(
+                "idea.log.debug.categories" to "#lermitage.intellij.extratci"
+            )
+        }
+
         autoReloadPlugins.set(false)
+
+        // If any warning or error with missing --add-opens, wait for the next gradle-intellij-plugin's update that should sync
+        // with https://raw.githubusercontent.com/JetBrains/intellij-community/master/plugins/devkit/devkit-core/src/run/OpenedPackages.txt
+        // or do it manually
     }
     buildSearchableOptions {
         enabled = false
@@ -118,6 +152,9 @@ tasks {
                 renderItem(getLatest(), Changelog.OutputType.HTML)
             }
         })
+    }
+    publishPlugin {
+        token.set(System.getenv("JLE_IJ_PLUGINS_PUBLISH_TOKEN"))
     }
 }
 
@@ -143,4 +180,62 @@ fun shortenIdeVersion(version: String): String {
         logger.warn("Failed to shorten IDE version $version: ${e.message}")
         version
     }
+}
+
+/** Find latest IntelliJ stable version from JetBrains website. Result is cached locally for 24h. */
+fun findLatestStableIdeVersion(): String {
+    val definitionsUrl = URL("https://www.jetbrains.com/updates/updates.xml")
+    var definitionsStr: String
+    try {
+        val cacheDurationMs = Integer.parseInt(project.findProperty("pluginIdeaVersionCacheDurationInHours") as String) * 60 * 60_000
+        val cachedDefinitionsFile = File(System.getProperty("java.io.tmpdir") + "/jle-ij-updates.cache.xml")
+        if (cachedDefinitionsFile.exists() && cachedDefinitionsFile.lastModified() < (System.currentTimeMillis() - cacheDurationMs)) {
+            logger.quiet("Delete cached file: $cachedDefinitionsFile")
+            cachedDefinitionsFile.delete()
+        }
+        if (cachedDefinitionsFile.exists()) {
+            logger.quiet("Find latest stable IDE version from cached file: $cachedDefinitionsFile")
+            definitionsStr = Files.readString(cachedDefinitionsFile.toPath())
+        } else {
+            logger.quiet("Find latest stable IDE version from: $definitionsUrl")
+            definitionsStr = readRemoteContent(definitionsUrl)
+            Files.writeString(cachedDefinitionsFile.toPath(), definitionsStr, Charsets.UTF_8)
+        }
+    } catch (e: Exception) {
+        logger.warn("Ignore cache and find latest stable IDE version from: $definitionsUrl", e)
+        definitionsStr = readRemoteContent(definitionsUrl)
+    }
+    val builderFactory = DocumentBuilderFactory.newInstance()
+    val builder = builderFactory.newDocumentBuilder()
+    val xmlDocument: Document = builder.parse(ByteArrayInputStream(definitionsStr.toByteArray()))
+    val xPath = XPathFactory.newInstance().newXPath()
+    val expression = "/products/product[@name='IntelliJ IDEA']/channel[@id='IC-IU-RELEASE-licensing-RELEASE']/build[1]/@version"
+    return xPath.compile(expression).evaluate(xmlDocument, XPathConstants.STRING) as String
+}
+
+/** Read a remote file as String. */
+fun readRemoteContent(url: URL): String {
+    val content = StringBuilder()
+    val conn = url.openConnection() as HttpURLConnection
+    conn.requestMethod = "GET"
+    BufferedReader(InputStreamReader(conn.inputStream)).use { rd ->
+        var line: String? = rd.readLine()
+        while (line != null) {
+            content.append(line)
+            line = rd.readLine()
+        }
+    }
+    return content.toString()
+}
+
+/** Get IDE version from gradle.properties or, of wanted, find latest stable IDE version from JetBrains website. */
+fun detectBestIdeVersion(): String {
+    val pluginIdeaVersionFromProps = project.findProperty("pluginIdeaVersion")
+    if (pluginIdeaVersionFromProps.toString() == "IC-LATEST-STABLE") {
+        return "IC-${findLatestStableIdeVersion()}"
+    }
+    if (pluginIdeaVersionFromProps.toString() == "IU-LATEST-STABLE") {
+        return "IU-${findLatestStableIdeVersion()}"
+    }
+    return pluginIdeaVersionFromProps.toString()
 }
