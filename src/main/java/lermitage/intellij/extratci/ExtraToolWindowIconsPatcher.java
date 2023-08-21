@@ -141,6 +141,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("download.svg", of("extratci/icons/custom/download.svg"));
         icons.put("upload.svg", of("extratci/icons/custom/upload.svg"));
         icons.put("toolWindowHierarchy.svg", of("extratci/icons/custom/toolWindowHierarchy.svg"));
+        icons.put("swapPanels.svg", of("extratci/icons/custom/swapPanels.svg"));
 
         return icons;
     }

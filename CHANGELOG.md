@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.27.0 (WIP)
+* add colors to Swap Panels icon.
+
 ## 1.26.0 (2023/06/03)
 * fix support for Pinned Tab icon in recent IDEs.
 * rework colouring of Bookmarks and Pin icons.
