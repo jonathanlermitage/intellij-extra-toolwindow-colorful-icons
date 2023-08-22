@@ -2,7 +2,7 @@
 
 ## 1.27.0 (WIP)
 * add colors to Swap Panels icon.
-* add new UI variants for Bookmarks and Services icons.
+* add new UI variants for Bookmarks, Commit, Refresh, Rollback and Services icons.
 * **new UI support: [up-voting this issue](https://youtrack.jetbrains.com/issue/IDEA-321006/cant-override-IDE-SVG-icons-using-IconPathPatcher-in-newUI) would help**. Thanks!
 
 ## 1.26.0 (2023/06/03)

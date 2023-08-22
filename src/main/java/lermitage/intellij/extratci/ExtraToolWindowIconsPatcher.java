@@ -71,7 +71,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("OpenTerminal_13x13.svg", of("extratci/icons/custom/OpenTerminal_13x13.svg"));
         icons.put("pullRequestsToolWindow.svg", of("extratci/icons/custom/pullRequestsToolWindow.svg"));
         icons.put("pythonPackages.svg", of("extratci/icons/custom/pythonPackages.svg"));
-        icons.put("toolWindowCommit.svg", of("extratci/icons/custom/toolWindowCommit.svg"));
         icons.put("toolWindowGradle.svg", of("extratci/icons/custom/toolWindowGradle.svg"));
         icons.put("toolWindowProblemsEmpty.svg", of("extratci/icons/custom/problemsEmpty.svg"));
         icons.put("problemsEmpty.svg", of("extratci/icons/custom/problemsEmpty.svg"));
@@ -83,9 +82,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("menu-saveall.svg", of("extratci/icons/custom/menu-saveall.svg"));
         icons.put("toolWindowAnt.svg", of("extratci/icons/custom/toolWindowAnt.svg"));
         icons.put("build.svg", of("extratci/icons/custom/build.svg"));
-        icons.put("refresh.svg", of("extratci/icons/custom/refresh.svg"));
         icons.put("reset.svg", of("extratci/icons/custom/reset.svg"));
-        icons.put("rollback.svg", of("extratci/icons/custom/rollback.svg"));
         icons.put("featureTrainer.svg", of("extratci/icons/custom/featureTrainer.svg"));
         icons.put("featureTrainerToolWindow.svg", of("extratci/icons/custom/featureTrainerToolWindow.svg"));
         icons.put("artifactSmall.svg", of("extratci/icons/custom/artifactSmall.svg"));
@@ -144,10 +141,27 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("swapPanels.svg", of("extratci/icons/custom/swapPanels.svg"));
 
         if (isNewUIEnabled) {
+            icons.put("bookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
             icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
+
+            icons.put("commit.svg", of("extratci/icons/custom/toolWindowCommit_newui.svg"));
+            icons.put("toolWindowCommit.svg", of("extratci/icons/custom/toolWindowCommit_newui.svg"));
+
+            icons.put("refresh.svg", of("extratci/icons/custom/refresh_newui.svg"));
+
+            icons.put("rollback.svg", of("extratci/icons/custom/rollback_newui.svg"));
+
+            icons.put("services.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
             icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
         } else {
             icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks.svg"));
+
+            icons.put("toolWindowCommit.svg", of("extratci/icons/custom/toolWindowCommit.svg"));
+
+            icons.put("refresh.svg", of("extratci/icons/custom/refresh.svg"));
+
+            icons.put("rollback.svg", of("extratci/icons/custom/rollback.svg"));
+
             icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices.svg"));
         }
 
