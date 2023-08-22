@@ -10,7 +10,7 @@ else
     gradlew_cmd := ./gradlew
 endif
 
-ij_min_version := 2020.1.4 # IMPORTANT must reflect settings.xml -> idea-version.since-build
+ij_min_version := 2023.1 # IMPORTANT must reflect settings.xml -> idea-version.since-build
 
 
 default: help
@@ -54,7 +54,7 @@ runold: intro ## run plugin in oldest supported IntelliJ Community version
 
 .PHONY: build
 build: intro ## build and package a plugin to build/distribution/ (see generated ZIP file)
-	${gradlew_cmd} clean buildPlugin test modernizer biz-lermitage-oga-gradle-check verifyPlugin --warning-mode all -PpluginVerifyProductDescriptor=true
+	${gradlew_cmd} clean buildPlugin test modernizer biz-lermitage-oga-gradle-check verifyPlugin --warning-mode all
 
 
 .PHONY: lint
@@ -99,7 +99,7 @@ dt: intro ## show dependencies graph
 
 .PHONY: publish
 publish: intro ## publish package to the JetBrains marketplace
-	${gradlew_cmd} clean buildPlugin test verifyPlugin publishPlugin --warning-mode all -PpluginVerifyProductDescriptor=true
+	${gradlew_cmd} clean buildPlugin test verifyPlugin publishPlugin --warning-mode all
 
 
 .PHONY: help

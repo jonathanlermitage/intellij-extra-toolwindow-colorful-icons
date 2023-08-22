@@ -25,6 +25,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     @SuppressWarnings("SpellCheckingInspection")
     @NotNull
     public static Map<String, IconItem> allIcons() {
+        boolean isNewUIEnabled = UIUtils.isNewUIEnabled();
+
         Map<String, IconItem> icons = new HashMap<>();
 
         // icons copied from ToolWindow Colorful Icons (JetBrains plugin)
@@ -84,7 +86,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("refresh.svg", of("extratci/icons/custom/refresh.svg"));
         icons.put("reset.svg", of("extratci/icons/custom/reset.svg"));
         icons.put("rollback.svg", of("extratci/icons/custom/rollback.svg"));
-        icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices.svg"));
         icons.put("featureTrainer.svg", of("extratci/icons/custom/featureTrainer.svg"));
         icons.put("featureTrainerToolWindow.svg", of("extratci/icons/custom/featureTrainerToolWindow.svg"));
         icons.put("artifactSmall.svg", of("extratci/icons/custom/artifactSmall.svg"));
@@ -108,7 +109,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("redo.svg", of("extratci/icons/custom/redo.svg"));
         icons.put("undo.svg", of("extratci/icons/custom/undo.svg"));
         icons.put("menu-cut.svg", of("extratci/icons/custom/menu-cut.svg"));
-        icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks.svg"));
         icons.put("cwmAccessDotOff.svg", of("extratci/icons/custom/cwmAccessDotOff.svg"));
         icons.put("cwmAccessOff.svg", of("extratci/icons/custom/cwmAccessOff.svg"));
         icons.put("gradleFile.svg", of("extratci/icons/custom/gradleFile.svg"));
@@ -142,6 +142,14 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("upload.svg", of("extratci/icons/custom/upload.svg"));
         icons.put("toolWindowHierarchy.svg", of("extratci/icons/custom/toolWindowHierarchy.svg"));
         icons.put("swapPanels.svg", of("extratci/icons/custom/swapPanels.svg"));
+
+        if (isNewUIEnabled) {
+            icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
+            icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
+        } else {
+            icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks.svg"));
+            icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices.svg"));
+        }
 
         return icons;
     }
