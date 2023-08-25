@@ -1,8 +1,10 @@
 # Extra ToolWindow Colorful Icons Change Log
 
 ## 1.27.0 (WIP)
+* add an option to prefer Old UI or New UI icon variants.
 * add colors to Swap Panels icon.
 * add new UI variants for Bookmarks, Commit, Refresh, Rollback and Services icons.
+* internal: code cleanup, remove compatibility code for unsupported old IDEs.
 * **new UI support: [up-voting this issue](https://youtrack.jetbrains.com/issue/IDEA-321006/cant-override-IDE-SVG-icons-using-IconPathPatcher-in-newUI) would help**. Thanks!
 
 ## 1.26.0 (2023/06/03)

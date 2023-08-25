@@ -7,11 +7,7 @@ import com.intellij.openapi.util.IconLoader;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.Nullable;
 
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTable;
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -28,6 +24,8 @@ public class SettingsForm implements Configurable {
     private JButton enableAllBtn;
     private JButton disableAllBtn;
     private JLabel descriptionLabel;
+    private JComboBox<ComboBoxWithImageItem> uiTypeSelector;
+    private JLabel uiTypeLabel;
 
     public SettingsForm() {
         this.settingsService = SettingsService.getInstance();
@@ -75,6 +73,26 @@ public class SettingsForm implements Configurable {
         //iconsTable.getColumnModel().getColumn(IconsTableModel.ICON_DESCRIPTION_ROW_NUMBER).setMaxWidth(300);
     }
 
+
+    private UITypeIconsPreference getSelectedUITypeIconsPreference() {
+        int selectedIndex = uiTypeSelector.getSelectedIndex();
+        if (selectedIndex == 0) {
+            return UITypeIconsPreference.BASED_ON_ACTIVE_UI_TYPE;
+        } else if (selectedIndex == 1) {
+            return UITypeIconsPreference.PREFER_OLD_UI_ICONS;
+        } else {
+            return UITypeIconsPreference.PREFER_NEW_UI_ICONS;
+        }
+    }
+
+    private void setSelectedUITypeIconsPreference(UITypeIconsPreference uiTypeIconsPreference) {
+        switch (uiTypeIconsPreference) {
+            case BASED_ON_ACTIVE_UI_TYPE -> uiTypeSelector.setSelectedIndex(0);
+            case PREFER_OLD_UI_ICONS -> uiTypeSelector.setSelectedIndex(1);
+            case PREFER_NEW_UI_ICONS -> uiTypeSelector.setSelectedIndex(2);
+        }
+    }
+
     @Nls(capitalization = Nls.Capitalization.Title)
     @Override
     public String getDisplayName() {
@@ -84,18 +102,36 @@ public class SettingsForm implements Configurable {
     @Override
     public @Nullable JComponent createComponent() {
         descriptionLabel.setText("Choose icons to (de)activate. Restart IDE to apply changes.");
+
+        uiTypeLabel.setText("Prefer old UI or new UI icon variants (Restart IDE to apply changes):");
+        uiTypeSelector.setRenderer(new ComboBoxWithImageRenderer());
+        uiTypeSelector.addItem(new ComboBoxWithImageItem(
+            "extratci/icons/plugin-internals/auto.svg", //NON-NLS
+            "Auto select old/new UI icons"));
+        uiTypeSelector.addItem(new ComboBoxWithImageItem(
+            "extratci/icons/plugin-internals/folder_oldui.svg",//NON-NLS
+            "Always prefer old UI icons"));
+        uiTypeSelector.addItem(new ComboBoxWithImageItem(
+            "extratci/icons/plugin-internals/folder_newui.svg", //NON-NLS
+            "Always prefer new UI icons"));
+        setSelectedUITypeIconsPreference(SettingsService.getInstance().getUiTypeIconsPreference());
+
         loadIconsTable();
         return mainPanel;
     }
 
     @Override
     public boolean isModified() {
+        if (settingsService.getUiTypeIconsPreference() != getSelectedUITypeIconsPreference()) {
+            return true;
+        }
         return modified;
     }
 
     @Override
     public void apply() {
         settingsService.setDisabledIcons(collectDisabledIconNames());
+        settingsService.setUiTypeIconsPreference(getSelectedUITypeIconsPreference());
         modified = false;
     }
 

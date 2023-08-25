@@ -27,6 +27,8 @@ public class SettingsService implements PersistentStateComponent<SettingsService
     // the implementation of PersistentStateComponent works by serializing public fields, so keep them public
     @SuppressWarnings("WeakerAccess")
     public List<String> disabledIcons = new ArrayList<>();
+    @SuppressWarnings("WeakerAccess")
+    public UITypeIconsPreference uiTypeIconsPreference;
 
     public static SettingsService getInstance() {
         return ApplicationManager.getApplication().getService(SettingsService.class);
@@ -45,6 +47,17 @@ public class SettingsService implements PersistentStateComponent<SettingsService
 
     public void setDisabledIcons(List<String> disabledIcons) {
         this.disabledIcons = disabledIcons;
+    }
+
+    public @NotNull UITypeIconsPreference getUiTypeIconsPreference() {
+        if (uiTypeIconsPreference == null) {
+            uiTypeIconsPreference = UITypeIconsPreference.BASED_ON_ACTIVE_UI_TYPE;
+        }
+        return uiTypeIconsPreference;
+    }
+
+    public void setUiTypeIconsPreference(UITypeIconsPreference uiTypeIconsPreference) {
+        this.uiTypeIconsPreference = uiTypeIconsPreference;
     }
 
     @Override

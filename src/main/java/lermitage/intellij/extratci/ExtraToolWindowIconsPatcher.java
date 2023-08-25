@@ -2,7 +2,6 @@
 
 package lermitage.intellij.extratci;
 
-import com.intellij.openapi.application.ApplicationInfo;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.util.IconPathPatcher;
@@ -25,8 +24,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     @SuppressWarnings("SpellCheckingInspection")
     @NotNull
     public static Map<String, IconItem> allIcons() {
-        boolean isNewUIEnabled = UIUtils.isNewUIEnabled();
-
         Map<String, IconItem> icons = new HashMap<>();
 
         // icons copied from ToolWindow Colorful Icons (JetBrains plugin)
@@ -140,7 +137,13 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("toolWindowHierarchy.svg", of("extratci/icons/custom/toolWindowHierarchy.svg"));
         icons.put("swapPanels.svg", of("extratci/icons/custom/swapPanels.svg"));
 
-        if (isNewUIEnabled) {
+        boolean useNewUI = switch (SettingsService.getInstance().getUiTypeIconsPreference()) {
+            case BASED_ON_ACTIVE_UI_TYPE -> UIUtils.isNewUIEnabled();
+            case PREFER_NEW_UI_ICONS -> true;
+            case PREFER_OLD_UI_ICONS -> false;
+        };
+
+        if (useNewUI) {
             icons.put("bookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
             icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
 
@@ -209,23 +212,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         int allIconsSize = enabledIcons.size();
         List<String> disabledIcons = SettingsService.getInstance().getDisabledIcons();
         disabledIcons.forEach(enabledIcons::remove);
-
-        // Starting with IJ 2022 (build 221+), resource path must not start with a leading "/". On older IJ versions, resource
-        // path has to start with a leading "/". A solution would be to support IJ 2022+ only, but we can easily
-        // detect IDE build version and adapt icons path when needed.
-        String buildVersion = ApplicationInfo.getInstance().getBuild().asStringWithoutProductCode();
-        if (buildVersion.startsWith("20") || buildVersion.startsWith("21")) {
-            LOG.info("Detected IDE build version " + buildVersion + ". This is an old build (<221). " +
-                "Will adapt code in order to customize IDE icons correctly.");
-            Map<String, IconItem> fixedEnabledIcons = new HashMap<>();
-            enabledIcons.forEach((ideIconName, customIcon) -> fixedEnabledIcons.put(
-                ideIconName,
-                IconItem.of("/" + customIcon.getIcon(), customIcon.getDescription())));
-            configuredIcons = fixedEnabledIcons;
-        } else {
-            configuredIcons = enabledIcons;
-        }
-
+        configuredIcons = enabledIcons;
         LOG.info("config loaded with success, enabled " + configuredIcons.size() + "/" + allIconsSize + " items");
     }
 }
