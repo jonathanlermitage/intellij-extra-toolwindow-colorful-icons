@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.27.0 (WIP)
+## 1.27.0 (2023/09/03)
 * add an option to prefer Old UI or New UI icon variants.
 * add colors to Swap Panels icon.
 * add new UI variants for Bookmarks, Commit, Refresh, Rollback and Services icons. **Future updates will add variants for more icons** (contributions would be hihly appreciated).
