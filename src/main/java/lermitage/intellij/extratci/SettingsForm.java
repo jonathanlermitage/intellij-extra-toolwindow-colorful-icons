@@ -101,9 +101,9 @@ public class SettingsForm implements Configurable {
 
     @Override
     public @Nullable JComponent createComponent() {
-        descriptionLabel.setText("Choose icons to (de)activate. Restart IDE to apply changes.");
+        descriptionLabel.setText("Choose icons to (de)activate.");
 
-        uiTypeLabel.setText("Prefer old UI or new UI icon variants (Restart IDE to apply changes):");
+        uiTypeLabel.setText("Prefer old UI or new UI icon variants:");
         uiTypeSelector.setRenderer(new ComboBoxWithImageRenderer());
         uiTypeSelector.addItem(new ComboBoxWithImageItem(
             "extratci/icons/plugin-internals/auto.svg", //NON-NLS
