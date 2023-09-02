@@ -20,7 +20,7 @@ IntelliJ IDEA based IDEs plugin that makes tool window icons colorful. This plug
 
 ## Build
 
-Install JDK8+. You should be able to start Gradle Wrapper (`gradlew`).
+Install JDK17+. You should be able to start Gradle Wrapper (`gradlew`).
 
 ### Gradle commands
 
