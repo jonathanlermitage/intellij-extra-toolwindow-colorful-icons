@@ -1,5 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.27.1 (2023/11/21)
+* fix missing Grunt icon in light theme.
+* optimize SVG icons size with SVGO 3.0.4.
+
 ## 1.27.0 (2023/09/03)
 * add an option to prefer Old UI or New UI icon variants.
 * add colors to Swap Panels icon.
