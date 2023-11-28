@@ -136,6 +136,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("upload.svg", of("extratci/icons/custom/upload.svg"));
         icons.put("toolWindowHierarchy.svg", of("extratci/icons/custom/toolWindowHierarchy.svg"));
         icons.put("swapPanels.svg", of("extratci/icons/custom/swapPanels.svg"));
+        icons.put("aiAssistantToolWindow.svg", of("extratci/icons/custom/aiAssistantColored.svg", "AI Assistant tool window"));
 
         boolean useNewUI = switch (SettingsService.getInstance().getUiTypeIconsPreference()) {
             case BASED_ON_ACTIVE_UI_TYPE -> UIUtils.isNewUIEnabled();

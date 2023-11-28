@@ -1,5 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.28.0 (2023/11/28)
+* add colors to AI Assistant tool window icon (back-ported from [Extra Icons plugin theme](https://plugins.jetbrains.com/plugin/11058-extra-icons)).
+* Help needed: don't hesitate to submit ideas of custom icons for JPA Buddy *dog* icons (JPA Explorer and JPA Designer tool windows) ;-)
+
 ## 1.27.1 (2023/11/21)
 * fix missing Grunt icon in light theme.
 * optimize SVG icons size with SVGO 3.0.4.
