@@ -137,6 +137,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("toolWindowHierarchy.svg", of("extratci/icons/custom/toolWindowHierarchy.svg"));
         icons.put("swapPanels.svg", of("extratci/icons/custom/swapPanels.svg"));
         icons.put("aiAssistantToolWindow.svg", of("extratci/icons/custom/aiAssistantColored.svg", "AI Assistant tool window"));
+        icons.put("/META-INF/buddyIconMono.svg", of("extratci/icons/custom/jpabuddyJPADesigner.svg", "JPA Designer tool window"));
+        icons.put("/icons/tree/Explorer.svg", of("extratci/icons/custom/jpabuddyJPAExplorer.svg", "JPA Explorer tool window"));
 
         boolean useNewUI = switch (SettingsService.getInstance().getUiTypeIconsPreference()) {
             case BASED_ON_ACTIVE_UI_TYPE -> UIUtils.isNewUIEnabled();

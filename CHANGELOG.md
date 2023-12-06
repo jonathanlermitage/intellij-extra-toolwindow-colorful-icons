@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.29.0 (2023/12/06)
+* add colors to JPA Buddy tool window icons (back-ported from [Extra Icons plugin theme](https://plugins.jetbrains.com/plugin/11058-extra-icons)).
+
 ## 1.28.0 (2023/11/28)
 * add colors to AI Assistant tool window icon (back-ported from [Extra Icons plugin theme](https://plugins.jetbrains.com/plugin/11058-extra-icons)).
 * help needed: don't hesitate to submit ideas of custom icons for JPA Buddy *dog* icons (JPA Explorer and JPA Designer tool windows) ;-)
