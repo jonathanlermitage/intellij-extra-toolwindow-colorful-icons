@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
+
 <h1 align="center">
     <a href="https://plugins.jetbrains.com/plugin/16604-extra-toolwindow-colorful-icons"><img src="./src/main/resources/META-INF/pluginIcon.svg" width="84" height="84" alt="logo"/></a><br/>
     Extra ToolWindow Colorful Icons
