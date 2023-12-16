@@ -83,7 +83,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("featureTrainer.svg", of("extratci/icons/custom/featureTrainer.svg"));
         icons.put("featureTrainerToolWindow.svg", of("extratci/icons/custom/featureTrainerToolWindow.svg"));
         icons.put("artifactSmall.svg", of("extratci/icons/custom/artifactSmall.svg"));
-        icons.put("emulator.svg", of("extratci/icons/custom/emulator.svg"));
         icons.put("readwrite.svg", of("extratci/icons/custom/readwrite.svg"));
         icons.put("readonly.svg", of("extratci/icons/custom/readonly.svg"));
         icons.put("locked.svg", of("extratci/icons/custom/locked.svg", "File badge in editor tabs and Project view"));
@@ -139,6 +138,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("aiAssistantToolWindow.svg", of("extratci/icons/custom/aiAssistantColored.svg", "AI Assistant tool window"));
         icons.put("/META-INF/buddyIconMono.svg", of("extratci/icons/custom/jpabuddyJPADesigner.svg", "JPA Designer tool window"));
         icons.put("/icons/tree/Explorer.svg", of("extratci/icons/custom/jpabuddyJPAExplorer.svg", "JPA Explorer tool window"));
+        icons.put("/studio/icons/shell/tool-windows/build-variants.svg", of("extratci/icons/custom/android.svg", "Android Build Variants"));
+        icons.put("/studio/icons/shell/tool-windows/device-manager.svg", of("extratci/icons/custom/device-manager.svg", "Android Device Manager"));
 
         boolean useNewUI = switch (SettingsService.getInstance().getUiTypeIconsPreference()) {
             case BASED_ON_ACTIVE_UI_TYPE -> UIUtils.isNewUIEnabled();
@@ -147,6 +148,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         };
 
         if (useNewUI) {
+            icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom/emulator_newui.svg", "Android Running Devices"));
+
             icons.put("bookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
             icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
 
@@ -160,6 +163,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
             icons.put("services.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
             icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
         } else {
+            icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom/emulator.svg", "Android Running Devices"));
+
             icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks.svg"));
 
             icons.put("toolWindowCommit.svg", of("extratci/icons/custom/toolWindowCommit.svg"));
