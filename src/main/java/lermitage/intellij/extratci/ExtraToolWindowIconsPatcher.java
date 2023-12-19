@@ -162,6 +162,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
             icons.put("services.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
             icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
+            icons.put("/icons/graphqlToolWindow.svg", of("extratci/icons/custom/graphql_newui.svg", "GraphQL tool window"));
         } else {
             icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom/emulator.svg", "Android Running Devices"));
 
@@ -174,6 +175,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
             icons.put("rollback.svg", of("extratci/icons/custom/rollback.svg"));
 
             icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices.svg"));
+            icons.put("/icons/graphqlToolWindow.svg", of("extratci/icons/custom/graphql.svg", "GraphQL tool window"));
         }
 
         return icons;

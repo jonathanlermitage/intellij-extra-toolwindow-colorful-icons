@@ -2,6 +2,7 @@
 
 ## 1.30.0 (WIP)
 * rework and add colors to more Android Studio (and Android plugin) tool window icons.
+* add colors to GraphQL icon.
 
 ## 1.29.0 (2023/12/06)
 * add colors to JPA Buddy tool window icons (back-ported from [Extra Icons plugin theme](https://plugins.jetbrains.com/plugin/11058-extra-icons)).
