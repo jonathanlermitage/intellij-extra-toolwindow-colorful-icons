@@ -163,6 +163,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
             icons.put("services.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
             icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
             icons.put("/icons/graphqlToolWindow.svg", of("extratci/icons/custom/graphql_newui.svg", "GraphQL tool window"));
+            icons.put("/studio/icons/shell/tool-windows/logcat.svg", of("extratci/icons/custom/logcat_newui.svg", "Android Logcat"));
+
         } else {
             icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom/emulator.svg", "Android Running Devices"));
 
@@ -176,6 +178,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
             icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices.svg"));
             icons.put("/icons/graphqlToolWindow.svg", of("extratci/icons/custom/graphql.svg", "GraphQL tool window"));
+            icons.put("/studio/icons/shell/tool-windows/logcat.svg", of("extratci/icons/custom/logcat.svg", "Android Logcat"));
         }
 
         return icons;
@@ -194,7 +197,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
-        //LOG.info("------patchPath------ " + path);
+        LOG.info("------patchPath------ " + path);
         if (configuredIcons == null) {
             loadConfig();
         }
