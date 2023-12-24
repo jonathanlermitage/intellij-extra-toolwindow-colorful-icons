@@ -197,7 +197,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
-        LOG.info("------patchPath------ " + path);
+        //LOG.info("------patchPath------ " + path);
         if (configuredIcons == null) {
             loadConfig();
         }
