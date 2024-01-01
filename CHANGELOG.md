@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.30.0 (WIP)
+## 1.30.0 (2024/01/02)
 * rework and add colors to more Android Studio (and Android plugin) tool window icons.
 * add colors to GraphQL icon.
 * add colors to Logcat icon.
