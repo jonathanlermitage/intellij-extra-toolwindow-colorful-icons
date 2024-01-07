@@ -1,5 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.31.0 (2024/01/02)
+* add colors to "Key Promoter X" icon.
+* rework "PlantUML integration" icon's colors and convert it from PNG to SVG.
+
 ## 1.30.0 (2024/01/02)
 * rework and add colors to more Android Studio (and Android plugin) tool window icons.
 * add colors to GraphQL icon.

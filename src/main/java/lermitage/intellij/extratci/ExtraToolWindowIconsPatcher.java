@@ -140,6 +140,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("/icons/tree/Explorer.svg", of("extratci/icons/custom/jpabuddyJPAExplorer.svg", "JPA Explorer tool window"));
         icons.put("/studio/icons/shell/tool-windows/build-variants.svg", of("extratci/icons/custom/android.svg", "Android Build Variants"));
         icons.put("/studio/icons/shell/tool-windows/device-manager.svg", of("extratci/icons/custom/device-manager.svg", "Android Device Manager"));
+        icons.put("kpxToolwindow.svg", of("extratci/icons/custom/kpxToolwindow.svg", "Key Promotex X tool window"));
+        icons.put("uml.png", of("extratci/icons/custom/uml.svg", "PlantUML integration tool window"));
 
         boolean useNewUI = switch (SettingsService.getInstance().getUiTypeIconsPreference()) {
             case BASED_ON_ACTIVE_UI_TYPE -> UIUtils.isNewUIEnabled();
