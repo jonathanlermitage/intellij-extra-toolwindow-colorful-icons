@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.31.0 (2024/01/02)
+## 1.31.0 (WIP)
 * add colors to "Key Promoter X" icon.
 * rework "PlantUML integration" icon's colors and convert it from PNG to SVG.
 
