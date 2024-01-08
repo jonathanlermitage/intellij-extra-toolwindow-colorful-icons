@@ -1,8 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
 ## 1.31.0 (WIP)
-* add colors to "Key Promoter X" icon.
-* rework "PlantUML integration" icon's colors and convert it from PNG to SVG.
+* add colors to [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x) icon.
+* add colors to [Developer Tools](https://plugins.jetbrains.com/plugin/21904-developer-tools) icon and make it a bit more visible (bigger).
+* rework [PlantUML integration](https://plugins.jetbrains.com/plugin/7017-plantuml-integration) icon's colors and convert it from PNG to SVG.
 
 ## 1.30.0 (2024/01/02)
 * rework and add colors to more Android Studio (and Android plugin) tool window icons.
