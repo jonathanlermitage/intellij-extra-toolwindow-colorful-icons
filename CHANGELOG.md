@@ -1,6 +1,6 @@
 # Extra ToolWindow Colorful Icons Change Log
 
-## 1.31.0 (WIP)
+## 1.31.0 (2024/01/09)
 * add colors to [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x) icon.
 * add colors to [Developer Tools](https://plugins.jetbrains.com/plugin/21904-developer-tools) icon and make it a bit more visible (bigger).
 * rework [PlantUML integration](https://plugins.jetbrains.com/plugin/7017-plantuml-integration) icon's colors and convert it from PNG to SVG.
