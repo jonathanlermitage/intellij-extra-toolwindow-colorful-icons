@@ -21,6 +21,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
     private Map<String, IconItem> configuredIcons;
 
+    private final boolean IS_LOG_PATCH_PATH = "true".equals(System.getProperty("extra.tci.log.patchPath", "false"));
+
     @SuppressWarnings("SpellCheckingInspection")
     @NotNull
     public static Map<String, IconItem> allIcons() {
@@ -200,7 +202,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
     @Override
     public @Nullable String patchPath(@NotNull String path, @Nullable ClassLoader classLoader) {
-        if ("true".equals(System.getProperty("extra.tci.log.patchPath", "false"))) {
+        if (IS_LOG_PATCH_PATH) {
             LOG.info("patchPath=" + path);
         }
 
