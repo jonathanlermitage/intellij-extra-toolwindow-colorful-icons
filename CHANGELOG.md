@@ -3,9 +3,13 @@
 ## 1.32.0 (WIP)
 * rework some new UI icons (thicker lines, to make them more visible when coloured, in normal and compact modes): Refresh, Rollback Commit, Bookmarks, Services.
 * restore the new UI Collapse, Collapse All, Expand and Expand All icons (I was still using the old icons even with the new UI), and add colors to them.
+* add colors to Back icon in new UI.
+* add colors to Forward icon in new UI.
 * add colors to Diff icon in new UI.
 * add colors to Pull icon in new UI.
 * add colors to Push icon in new UI.
+* add colors to Undo icon in new UI.
+* add colors to Redo icon in new UI.
 
 ## 1.31.1 (2024/01/23)
 * minor code rework.

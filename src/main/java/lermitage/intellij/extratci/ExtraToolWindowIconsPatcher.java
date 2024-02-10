@@ -98,9 +98,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("print.svg", of("extratci/icons/custom/print.svg"));
         icons.put("toolWindowMessages.svg", of("extratci/icons/custom/toolWindowMessages.svg"));
         icons.put("toolWindowTodo.svg", of("extratci/icons/custom/toolWindowTodo.svg"));
-        icons.put("back.svg", of("extratci/icons/custom/back.svg"));
-        icons.put("redo.svg", of("extratci/icons/custom/redo.svg"));
-        icons.put("undo.svg", of("extratci/icons/custom/undo.svg"));
         icons.put("menu-cut.svg", of("extratci/icons/custom/menu-cut.svg"));
         icons.put("cwmAccessDotOff.svg", of("extratci/icons/custom/cwmAccessDotOff.svg"));
         icons.put("cwmAccessOff.svg", of("extratci/icons/custom/cwmAccessOff.svg"));
@@ -153,6 +150,11 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         if (useNewUI) {
             icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom-expui/emulator_newui.svg", "Android Running Devices"));
 
+            icons.put("back.svg", of("extratci/icons/custom-expui/back.svg"));
+            icons.put("forward.svg", of("extratci/icons/custom-expui/forward.svg"));
+            icons.put("redo.svg", of("extratci/icons/custom-expui/redo.svg"));
+            icons.put("undo.svg", of("extratci/icons/custom-expui/undo.svg"));
+
             icons.put("/actions/collapseall.svg", of("extratci/icons/custom-expui/collapseAll.svg"));
             icons.put("/actions/expandall.svg", of("extratci/icons/custom-expui/expandAll.svg"));
             icons.put("collapse.svg", of("extratci/icons/custom-expui/collapse.svg"));
@@ -179,6 +181,10 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
         } else {
             icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom/emulator.svg", "Android Running Devices"));
+
+            icons.put("back.svg", of("extratci/icons/custom/back.svg"));
+            icons.put("redo.svg", of("extratci/icons/custom/redo.svg"));
+            icons.put("undo.svg", of("extratci/icons/custom/undo.svg"));
 
             icons.put("/actions/collapseall.svg", of("extratci/icons/custom/collapseall.svg"));
             icons.put("/actions/expandall.svg", of("extratci/icons/custom/expandall.svg"));
