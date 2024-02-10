@@ -18,9 +18,9 @@ import javax.xml.xpath.XPathFactory
 
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.16.1" // https://github.com/JetBrains/gradle-intellij-plugin
+    id("org.jetbrains.intellij") version "1.17.1" // https://github.com/JetBrains/gradle-intellij-plugin
     id("org.jetbrains.changelog") version "2.2.0" // https://github.com/JetBrains/gradle-changelog-plugin
-    id("com.github.ben-manes.versions") version "0.50.0" // https://github.com/ben-manes/gradle-versions-plugin
+    id("com.github.ben-manes.versions") version "0.51.0" // https://github.com/ben-manes/gradle-versions-plugin
     id("com.palantir.git-version") version "3.0.0" // https://github.com/palantir/gradle-git-version
     id("com.github.andygoossens.modernizer") version "1.9.0" // https://github.com/andygoossens/gradle-modernizer-plugin
     id("biz.lermitage.oga") version "1.1.1" // https://github.com/jonathanlermitage/oga-gradle-plugin
@@ -130,6 +130,10 @@ tasks {
 
         // force detection of slow operations in EDT when playing with sandboxed IDE (SlowOperations.assertSlowOperationsAreAllowed)
         jvmArgs("-Dide.slow.operations.assertion=true")
+
+        jvmArgs("-Didea.is.internal=true")
+
+        jvmArgs("-Dextra.tci.log.patchPath=true")
 
         if (pluginEnableDebugLogs.toBoolean()) {
             systemProperties(
