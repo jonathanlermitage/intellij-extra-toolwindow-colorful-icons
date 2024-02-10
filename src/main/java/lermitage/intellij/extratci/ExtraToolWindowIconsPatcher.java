@@ -173,10 +173,9 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
             icons.put("/icons/graphqlToolWindow.svg", of("extratci/icons/custom-expui/graphql_newui.svg", "GraphQL tool window"));
             icons.put("/studio/icons/shell/tool-windows/logcat.svg", of("extratci/icons/custom/logcat_newui.svg", "Android Logcat"));
 
-            // C:/Users/jonat/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2023.3.3/4b1fe703744f169075df0647a81bd330f9878746/ideaIC-2023.3.3/lib/app-client.jar!
-            //icons.put("/actions/checkOut.svg", of("extratci/icons/custom-expui/"));
-            //icons.put("/expui/vcs/push.svg", of("extratci/icons/custom-expui/"));
-            //icons.put("/expui/vcs/diff.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
+            icons.put("/vcs/push.svg", of("extratci/icons/custom-expui/push.svg"));
+            icons.put("/actions/checkOut.svg", of("extratci/icons/custom-expui/update.svg"));
+            icons.put("/actions/diff.svg", of("extratci/icons/custom-expui/diff.svg"));
 
         } else {
             icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom/emulator.svg", "Android Running Devices"));
