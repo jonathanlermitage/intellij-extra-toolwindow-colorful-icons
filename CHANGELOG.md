@@ -1,5 +1,9 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.32.0 (WIP)
+* rework some new UI icons (thicker lines, to make them more visible when coloured, in normal and compact modes): Refresh, Rollback Commit, Bookmarks, Services.
+* restore the new UI Collapse, Collapse All, Expand and Expand All icons (I was still using the old icons even with the new UI), and add colors to them.
+
 ## 1.31.1 (2024/01/23)
 * minor code rework.
 

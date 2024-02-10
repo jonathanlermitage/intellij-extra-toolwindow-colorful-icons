@@ -98,8 +98,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("print.svg", of("extratci/icons/custom/print.svg"));
         icons.put("toolWindowMessages.svg", of("extratci/icons/custom/toolWindowMessages.svg"));
         icons.put("toolWindowTodo.svg", of("extratci/icons/custom/toolWindowTodo.svg"));
-        icons.put("collapseall.svg", of("extratci/icons/custom/collapseall.svg"));
-        icons.put("expandall.svg", of("extratci/icons/custom/expandall.svg"));
         icons.put("back.svg", of("extratci/icons/custom/back.svg"));
         icons.put("redo.svg", of("extratci/icons/custom/redo.svg"));
         icons.put("undo.svg", of("extratci/icons/custom/undo.svg"));
@@ -153,25 +151,38 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         };
 
         if (useNewUI) {
-            icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom/emulator_newui.svg", "Android Running Devices"));
+            icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom-expui/emulator_newui.svg", "Android Running Devices"));
 
-            icons.put("bookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
-            icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks_newui.svg"));
+            icons.put("/actions/collapseall.svg", of("extratci/icons/custom-expui/collapseAll.svg"));
+            icons.put("/actions/expandall.svg", of("extratci/icons/custom-expui/expandAll.svg"));
+            icons.put("collapse.svg", of("extratci/icons/custom-expui/collapse.svg"));
+            icons.put("expand.svg", of("extratci/icons/custom-expui/expand.svg"));
 
-            icons.put("commit.svg", of("extratci/icons/custom/toolWindowCommit_newui.svg"));
-            icons.put("toolWindowCommit.svg", of("extratci/icons/custom/toolWindowCommit_newui.svg"));
+            icons.put("bookmarks.svg", of("extratci/icons/custom-expui/toolWindowBookmarks_newui.svg"));
+            icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom-expui/toolWindowBookmarks_newui.svg"));
 
-            icons.put("refresh.svg", of("extratci/icons/custom/refresh_newui.svg"));
+            icons.put("commit.svg", of("extratci/icons/custom-expui/toolWindowCommit_newui.svg"));
+            icons.put("toolWindowCommit.svg", of("extratci/icons/custom-expui/toolWindowCommit_newui.svg"));
 
-            icons.put("rollback.svg", of("extratci/icons/custom/rollback_newui.svg"));
+            icons.put("refresh.svg", of("extratci/icons/custom-expui/refresh_newui.svg"));
 
-            icons.put("services.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
-            icons.put("toolWindowServices.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
-            icons.put("/icons/graphqlToolWindow.svg", of("extratci/icons/custom/graphql_newui.svg", "GraphQL tool window"));
+            icons.put("rollback.svg", of("extratci/icons/custom-expui/rollback_newui.svg"));
+
+            icons.put("services.svg", of("extratci/icons/custom-expui/toolWindowServices_newui.svg"));
+            icons.put("toolWindowServices.svg", of("extratci/icons/custom-expui/toolWindowServices_newui.svg"));
+            icons.put("/icons/graphqlToolWindow.svg", of("extratci/icons/custom-expui/graphql_newui.svg", "GraphQL tool window"));
             icons.put("/studio/icons/shell/tool-windows/logcat.svg", of("extratci/icons/custom/logcat_newui.svg", "Android Logcat"));
+
+            // C:/Users/jonat/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2023.3.3/4b1fe703744f169075df0647a81bd330f9878746/ideaIC-2023.3.3/lib/app-client.jar!
+            //icons.put("/actions/checkOut.svg", of("extratci/icons/custom-expui/"));
+            //icons.put("/expui/vcs/push.svg", of("extratci/icons/custom-expui/"));
+            //icons.put("/expui/vcs/diff.svg", of("extratci/icons/custom/toolWindowServices_newui.svg"));
 
         } else {
             icons.put("/studio/icons/shell/tool-windows/emulator.svg", of("extratci/icons/custom/emulator.svg", "Android Running Devices"));
+
+            icons.put("/actions/collapseall.svg", of("extratci/icons/custom/collapseall.svg"));
+            icons.put("/actions/expandall.svg", of("extratci/icons/custom/expandall.svg"));
 
             icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom/toolWindowBookmarks.svg"));
 
