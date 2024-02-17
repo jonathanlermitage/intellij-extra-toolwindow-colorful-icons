@@ -157,8 +157,10 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
 
             icons.put("/actions/collapseall.svg", of("extratci/icons/custom-expui/collapseAll.svg"));
             icons.put("/actions/expandall.svg", of("extratci/icons/custom-expui/expandAll.svg"));
-            icons.put("collapse.svg", of("extratci/icons/custom-expui/collapse.svg"));
-            icons.put("expand.svg", of("extratci/icons/custom-expui/expand.svg"));
+            icons.put("/collapse.svg", of("extratci/icons/custom-expui/collapse.svg"));
+            icons.put("/expand.svg", of("extratci/icons/custom-expui/expand.svg"));
+            icons.put("/toolbar/collapse.svg", of("extratci/icons/custom-expui/toolbar_collapse.svg"));
+            icons.put("/toolbar/expand.svg", of("extratci/icons/custom-expui/toolbar_expand.svg"));
 
             icons.put("bookmarks.svg", of("extratci/icons/custom-expui/toolWindowBookmarks_newui.svg"));
             icons.put("toolWindowBookmarks.svg", of("extratci/icons/custom-expui/toolWindowBookmarks_newui.svg"));
