@@ -26,7 +26,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     @SuppressWarnings("SpellCheckingInspection")
     @NotNull
     public static Map<String, IconItem> allIcons() {
-        Map<String, IconItem> icons = new HashMap<>();
+        Map<String, IconItem> icons = new SafeMap<>();
 
         // icons copied from ToolWindow Colorful Icons (JetBrains plugin)
         icons.put("CMakeToolWindow.svg", of("extratci/icons/original/CIDR/clion/resources/icons/CMakeToolWindow.svg"));
