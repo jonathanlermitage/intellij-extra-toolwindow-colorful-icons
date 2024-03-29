@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.34.0 (2024/03/29)
+* add colors to [Extra IDE Tweaks](https://plugins.jetbrains.com/plugin/23927-extra-ide-tweaks) Open Editors tool window icon.
+
 ## 1.33.0 (2024/02/17)
 * add colors to toolbar's specific Collapse and Expand icons in new UI.
 

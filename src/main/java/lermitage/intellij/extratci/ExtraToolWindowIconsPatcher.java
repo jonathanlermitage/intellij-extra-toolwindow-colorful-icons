@@ -140,6 +140,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
         icons.put("kpxToolwindow.svg", of("extratci/icons/custom/kpxToolwindow.svg", "Key Promotex X tool window (3rd party plugin)"));
         icons.put("uml.png", of("extratci/icons/custom/uml.svg", "PlantUML integration tool window (3rd party plugin)"));
         icons.put("/dev/turingcomplete/intellijdevelopertoolsplugin/icons/toolwindow.svg", of("extratci/icons/custom/developer-tools.svg", "Developer Tools tool window (3rd party plugin)"));
+        icons.put("/extraidetweaks/icons/toolWindowOpenEditors.svg", of("extratci/icons/custom/toolWindowProject.svg", "Extra IDE Tweaks Open Editors tool window (3rd party plugin)"));
 
         boolean useNewUI = switch (SettingsService.getInstance().getUiTypeIconsPreference()) {
             case BASED_ON_ACTIVE_UI_TYPE -> UIUtils.isNewUIEnabled();
