@@ -2,6 +2,7 @@
 
 package lermitage.intellij.extratci;
 
+import com.intellij.ide.AppLifecycleListener;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.util.IconPathPatcher;
@@ -15,13 +16,18 @@ import java.util.Map;
 
 import static lermitage.intellij.extratci.IconItem.of;
 
-public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
+public class ExtraToolWindowIconsPatcher extends IconPathPatcher implements AppLifecycleListener {
 
     private final Logger LOG = Logger.getInstance(getClass().getName());
 
     private Map<String, IconItem> configuredIcons;
 
     private final boolean IS_LOG_PATCH_PATH = "true".equals(System.getProperty("extra.tci.log.patchPath", "false"));
+
+    @Override
+    public void appFrameCreated(@NotNull List<String> commandLineArgs) {
+        IconLoader.installPathPatcher(this);
+    }
 
     @SuppressWarnings("SpellCheckingInspection")
     @NotNull
@@ -211,7 +217,6 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher {
     public ExtraToolWindowIconsPatcher() {
         super();
         loadConfig();
-        IconLoader.installPathPatcher(this);
     }
 
     @Override

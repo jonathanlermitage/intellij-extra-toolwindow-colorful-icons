@@ -1,5 +1,8 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.35.0 (2024/04/12)
+* fix usage of a JetBrains deprecated API.
+
 ## 1.34.0 (2024/03/29)
 * add colors to [Extra IDE Tweaks](https://plugins.jetbrains.com/plugin/23927-extra-ide-tweaks) Open Editors tool window icon.
 

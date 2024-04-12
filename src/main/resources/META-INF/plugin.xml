@@ -31,10 +31,11 @@
                                  displayName="Extra ToolWindow Colorful Icons"
                                  parentId="appearance"/>
     </extensions>
-    <application-components>
-        <component>
-            <implementation-class>lermitage.intellij.extratci.ExtraToolWindowIconsPatcher</implementation-class>
-        </component>
-    </application-components>
+
+    <applicationListeners>
+        <listener class="lermitage.intellij.extratci.ExtraToolWindowIconsPatcher"
+                  topic="com.intellij.ide.AppLifecycleListener"
+                  activeInHeadlessMode="false"/>
+    </applicationListeners>
 
 </idea-plugin>
