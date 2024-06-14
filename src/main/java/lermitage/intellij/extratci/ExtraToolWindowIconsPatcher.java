@@ -148,6 +148,8 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher implements AppL
         icons.put("/dev/turingcomplete/intellijdevelopertoolsplugin/icons/toolwindow.svg", of("extratci/icons/custom/developer-tools.svg", "Developer Tools tool window (3rd party plugin)"));
         icons.put("/extraidetweaks/icons/toolWindowOpenEditors.svg", of("extratci/icons/custom/toolWindowProject.svg", "Extra IDE Tweaks Open Editors tool window (3rd party plugin)"));
 
+        icons.put("/studio/icons/shell/tool-windows/agp-upgrade-assistant.svg", of("extratci/icons/custom/toolWindowAGP.svg", "AGP Assistant tool window (Android Studio)"));
+
         boolean useNewUI = switch (SettingsService.getInstance().getUiTypeIconsPreference()) {
             case BASED_ON_ACTIVE_UI_TYPE -> UIUtils.isNewUIEnabled();
             case PREFER_NEW_UI_ICONS -> true;

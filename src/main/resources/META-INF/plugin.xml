@@ -17,14 +17,14 @@
     </description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="231.6890.12"/>
+    <idea-version since-build="233.11799.241"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <errorHandler implementation="com.intellij.diagnostic.JetBrainsMarketplaceErrorReportSubmitter"/>
         <applicationService serviceImplementation="lermitage.intellij.extratci.SettingsService"/>
         <applicationConfigurable instance="lermitage.intellij.extratci.SettingsForm"
                                  id="LermitageExtraTci"
