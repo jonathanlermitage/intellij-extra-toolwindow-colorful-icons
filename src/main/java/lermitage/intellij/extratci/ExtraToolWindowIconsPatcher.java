@@ -139,6 +139,7 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher implements AppL
         icons.put("toolWindowHierarchy.svg", of("extratci/icons/custom/toolWindowHierarchy.svg"));
         icons.put("swapPanels.svg", of("extratci/icons/custom/swapPanels.svg"));
         icons.put("aiAssistantToolWindow.svg", of("extratci/icons/custom/aiAssistantColored.svg", "AI Assistant tool window"));
+        icons.put("aiAssistant.svg", of("extratci/icons/custom/aiAssistantColored.svg", "AI Assistant status: enabled"));
         icons.put("/META-INF/buddyIconMono.svg", of("extratci/icons/custom/jpabuddyJPADesigner.svg", "JPA Designer tool window"));
         icons.put("/icons/tree/Explorer.svg", of("extratci/icons/custom/jpabuddyJPAExplorer.svg", "JPA Explorer tool window"));
         icons.put("/studio/icons/shell/tool-windows/build-variants.svg", of("extratci/icons/custom/android.svg", "Android Build Variants"));
@@ -147,8 +148,9 @@ public class ExtraToolWindowIconsPatcher extends IconPathPatcher implements AppL
         icons.put("uml.png", of("extratci/icons/custom/uml.svg", "PlantUML integration tool window (3rd party plugin)"));
         icons.put("/dev/turingcomplete/intellijdevelopertoolsplugin/icons/toolwindow.svg", of("extratci/icons/custom/developer-tools.svg", "Developer Tools tool window (3rd party plugin)"));
         icons.put("/extraidetweaks/icons/toolWindowOpenEditors.svg", of("extratci/icons/custom/toolWindowProject.svg", "Extra IDE Tweaks Open Editors tool window (3rd party plugin)"));
-
         icons.put("/studio/icons/shell/tool-windows/agp-upgrade-assistant.svg", of("extratci/icons/custom/toolWindowAGP.svg", "AGP Assistant tool window (Android Studio)"));
+        icons.put("/icons/stroke/GrazieCloudProcessing.svg", of("extratci/icons/custom/GrazieCloudProcessing.svg", "Grazie Pro status: connected to the cloud"));
+        icons.put("/icons/stroke/GrazieCloudError.svg", of("extratci/icons/custom/GrazieCloudError.svg", "Grazie Pro status: error"));
 
         boolean useNewUI = switch (SettingsService.getInstance().getUiTypeIconsPreference()) {
             case BASED_ON_ACTIVE_UI_TYPE -> UIUtils.isNewUIEnabled();

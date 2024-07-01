@@ -1,5 +1,10 @@
 # Extra ToolWindow Colorful Icons Change Log
 
+## 1.37.0 (2024/07/01)
+* add colors and rework the Grazie Pro status icons (status: connected to the cloud, error).
+* add colors to the AI Assistant status icon (status: enabled).
+* rework the AI Assistant dark tool window icon.
+
 ## 1.36.0 (2024/06/14)
 * add colors and rework the AGP Assistant tool window icon (Android Studio).
 * integrate the new IDE [Exception Analyzer](https://plugins.jetbrains.com/docs/marketplace/exception-analyzer.html). This is an easy way to report plugin exceptions from IntelliJ Platform-based products to plugin developers right on JetBrains Marketplace, instead of opening an issue on the plugin's GitHub repository.
